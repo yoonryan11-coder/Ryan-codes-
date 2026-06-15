@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-NZ" style="background:#F4F2EC">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work — Yoonspace</title>
+  <meta name="description" content="Selected work from Yoonspace — rebrands, websites and campaigns for Christchurch and New Zealand businesses." />
+  <meta name="theme-color" content="#5226E0" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235226E0'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23FFC24B'/%3E%3Cellipse cx='16' cy='16' rx='12' ry='5.5' fill='none' stroke='%23FF5A36' stroke-width='2' transform='rotate(-20 16 16)'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/tailwind.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>[data-filter][data-active="true"]{background:#161421;color:#F4F2EC;border-color:#161421}</style>
+</head>
+<body class="font-sans text-ink antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-ink focus:text-paper focus:px-4 focus:py-2 focus:rounded-full">Skip to content</a>
+
+  <header data-nav class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <nav class="mx-auto mt-3 flex max-w-7xl items-center justify-between gap-4 rounded-full border border-ink/10 bg-paper/80 px-4 py-2.5 backdrop-blur-md transition-all duration-300 sm:mx-4 sm:px-5 lg:mx-auto" aria-label="Primary">
+      <a href="index.html" class="flex items-center gap-2.5 font-display text-lg font-extrabold tracking-tight" aria-label="Yoonspace home">
+        <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#5226E0"/><circle cx="16" cy="16" r="3.6" fill="#FFC24B"/><ellipse cx="16" cy="16" rx="11.5" ry="5" fill="none" stroke="#FF5A36" stroke-width="2" transform="rotate(-20 16 16)"/></svg>
+        Yoonspace
+      </a>
+      <div class="hidden items-center gap-7 md:flex">
+        <a href="work.html" class="link-underline text-sm font-semibold text-violet">Work</a>
+        <a href="services.html" class="link-underline text-sm font-medium">Services</a>
+        <a href="about.html" class="link-underline text-sm font-medium">About</a>
+        <a href="contact.html" class="btn rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper hover:bg-violet">Start a project</a>
+      </div>
+      <button data-nav-toggle class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-ink/15" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" data-nav-menu class="hidden md:hidden">
+      <div class="mx-3 mt-2 rounded-4xl border border-ink/10 bg-paper p-6 shadow-2xl shadow-ink/10">
+        <div class="flex flex-col gap-1 text-2xl font-display font-bold">
+          <a href="work.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Work</a>
+          <a href="services.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Services</a>
+          <a href="about.html" class="rounded-2xl px-3 py-3 hover:bg-mist">About</a>
+          <a href="contact.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Contact</a>
+        </div>
+        <a href="contact.html" class="btn mt-4 block rounded-full bg-coral px-5 py-3.5 text-center text-base font-semibold text-ink">Start a project</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="px-5 pt-32 pb-10 sm:px-8 sm:pt-40">
+      <div class="mx-auto max-w-7xl">
+        <p class="eyebrow text-violet" data-reveal>Work</p>
+        <h1 class="mt-6 max-w-4xl font-display font-extrabold display-xl" data-reveal>The receipts.</h1>
+        <p class="mt-8 max-w-2xl text-lg text-muted sm:text-xl" data-reveal>A selection of brands we've helped find their space. Results below are illustrative of the outcomes we work toward.</p>
+
+        <!-- Filter -->
+        <div data-filter-bar class="mt-10 flex flex-wrap gap-2" role="group" aria-label="Filter work by discipline" data-reveal>
+          <button data-filter="all" data-active="true" class="rounded-full border border-ink/20 px-4 py-2 text-sm font-medium cursor-pointer transition-colors hover:border-ink">All</button>
+          <button data-filter="brand" data-active="false" class="rounded-full border border-ink/20 px-4 py-2 text-sm font-medium cursor-pointer transition-colors hover:border-ink">Brand</button>
+          <button data-filter="web" data-active="false" class="rounded-full border border-ink/20 px-4 py-2 text-sm font-medium cursor-pointer transition-colors hover:border-ink">Web</button>
+          <button data-filter="campaign" data-active="false" class="rounded-full border border-ink/20 px-4 py-2 text-sm font-medium cursor-pointer transition-colors hover:border-ink">Campaign</button>
+          <button data-filter="social" data-active="false" class="rounded-full border border-ink/20 px-4 py-2 text-sm font-medium cursor-pointer transition-colors hover:border-ink">Social</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-5 pb-24 sm:px-8 sm:pb-28">
+      <div class="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+        <article data-work-item data-tags="brand web" class="group overflow-hidden rounded-4xl border border-ink/10 bg-paper card-lift" data-reveal>
+          <div class="relative flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-violet to-violet-700">
+            <span class="font-display text-2xl font-extrabold text-white/90">Port Hills Coffee</span>
+            <span class="absolute left-4 top-4 rounded-full bg-amber px-3 py-1 font-mono text-xs font-bold text-ink">+182% online</span>
+          </div>
+          <div class="p-6">
+            <p class="font-mono text-xs text-muted">Rebrand · E-commerce</p>
+            <h2 class="mt-2 font-display text-xl font-bold">A roastery worth the queue, online too</h2>
+            <p class="mt-2 text-sm text-muted">New identity and a Shopify store that tripled subscription sign-ups.</p>
+          </div>
+        </article>
+
+        <article data-work-item data-tags="campaign social" class="group overflow-hidden rounded-4xl border border-ink/10 bg-paper card-lift" data-reveal style="--reveal-delay:60ms">
+          <div class="relative flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-coral to-amber">
+            <span class="font-display text-2xl font-extrabold text-ink/85">Avon Cycles</span>
+            <span class="absolute left-4 top-4 rounded-full bg-ink px-3 py-1 font-mono text-xs font-bold text-paper">Sold out · 9 days</span>
+          </div>
+          <div class="p-6">
+            <p class="font-mono text-xs text-muted">Campaign · Paid media</p>
+            <h2 class="mt-2 font-display text-xl font-bold">A launch the whole city pedalled to</h2>
+            <p class="mt-2 text-sm text-muted">An integrated launch that cleared the first production run in under a fortnight.</p>
+          </div>
+        </article>
+
+        <article data-work-item data-tags="brand social" class="group overflow-hidden rounded-4xl border border-ink/10 bg-paper card-lift" data-reveal style="--reveal-delay:120ms">
+          <div class="relative flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-ink to-violet">
+            <span class="font-display text-2xl font-extrabold text-white/90">Tussock Outdoor</span>
+            <span class="absolute left-4 top-4 rounded-full bg-amber px-3 py-1 font-mono text-xs font-bold text-ink">3.4× ROAS</span>
+          </div>
+          <div class="p-6">
+            <p class="font-mono text-xs text-muted">Strategy · Social</p>
+            <h2 class="mt-2 font-display text-xl font-bold">From local secret to national shelf</h2>
+            <p class="mt-2 text-sm text-muted">Repositioning and a content engine that landed them in stores nationwide.</p>
+          </div>
+        </article>
+
+        <article data-work-item data-tags="brand campaign" class="group overflow-hidden rounded-4xl border border-ink/10 bg-paper card-lift" data-reveal>
+          <div class="relative flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-amber to-coral">
+            <span class="font-display text-2xl font-extrabold text-ink/85">Lyttelton Brewing</span>
+            <span class="absolute left-4 top-4 rounded-full bg-ink px-3 py-1 font-mono text-xs font-bold text-paper">+58% foot traffic</span>
+          </div>
+          <div class="p-6">
+            <p class="font-mono text-xs text-muted">Brand · Campaign</p>
+            <h2 class="mt-2 font-display text-xl font-bold">A harbour-town brewer with a new roar</h2>
+            <p class="mt-2 text-sm text-muted">A bold rebrand and taproom campaign that packed out the harbour.</p>
+          </div>
+        </article>
+
+        <article data-work-item data-tags="web social" class="group overflow-hidden rounded-4xl border border-ink/10 bg-paper card-lift" data-reveal style="--reveal-delay:60ms">
+          <div class="relative flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-violet to-coral">
+            <span class="font-display text-2xl font-extrabold text-white/90">Riverstone Dental</span>
+            <span class="absolute left-4 top-4 rounded-full bg-amber px-3 py-1 font-mono text-xs font-bold text-ink">2.1× bookings</span>
+          </div>
+          <div class="p-6">
+            <p class="font-mono text-xs text-muted">Web · Local SEO</p>
+            <h2 class="mt-2 font-display text-xl font-bold">A practice patients can find and trust</h2>
+            <p class="mt-2 text-sm text-muted">A calmer website and local search push that doubled new-patient bookings.</p>
+          </div>
+        </article>
+
+        <article data-work-item data-tags="brand web campaign" class="group overflow-hidden rounded-4xl border border-ink/10 bg-paper card-lift" data-reveal style="--reveal-delay:120ms">
+          <div class="relative flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-ink-2 to-amber">
+            <span class="font-display text-2xl font-extrabold text-white/90">Canterbury Organics</span>
+            <span class="absolute left-4 top-4 rounded-full bg-coral px-3 py-1 font-mono text-xs font-bold text-paper">Nationwide listing</span>
+          </div>
+          <div class="p-6">
+            <p class="font-mono text-xs text-muted">Brand · Web · Campaign</p>
+            <h2 class="mt-2 font-display text-xl font-bold">Plains-grown produce, properly packaged</h2>
+            <p class="mt-2 text-sm text-muted">Packaging, site and launch that won shelf space in two national grocers.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="px-5 pb-24 sm:px-8 sm:pb-28">
+      <div class="mx-auto max-w-7xl overflow-hidden rounded-4xl bg-violet px-7 py-16 text-white sm:px-14 sm:py-24" data-reveal>
+        <div class="grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-center">
+          <h2 class="font-display font-extrabold display-lg">Your brand,<br />next on this page.</h2>
+          <div class="flex flex-col gap-3 lg:items-end">
+            <p class="max-w-sm text-white/80 lg:text-right">Bring us a problem worth solving and we'll show you what good looks like.</p>
+            <a href="contact.html" class="btn rounded-full bg-amber px-8 py-4 text-center text-base font-semibold text-ink hover:bg-coral">Start a project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink px-5 py-16 text-paper sm:px-8">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="flex items-center gap-2.5 font-display text-2xl font-extrabold">
+            <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#5226E0"/><circle cx="16" cy="16" r="3.6" fill="#FFC24B"/><ellipse cx="16" cy="16" rx="11.5" ry="5" fill="none" stroke="#FF5A36" stroke-width="2" transform="rotate(-20 16 16)"/></svg>
+            Yoonspace
+          </a>
+          <p class="mt-5 max-w-xs text-paper/60">Full-service marketing studio. Made in Ōtautahi Christchurch, working with ambitious brands across Aotearoa.</p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="eyebrow text-paper/50">Explore</p>
+          <ul class="mt-4 space-y-3">
+            <li><a href="work.html" class="link-underline text-paper/85">Work</a></li>
+            <li><a href="services.html" class="link-underline text-paper/85">Services</a></li>
+            <li><a href="about.html" class="link-underline text-paper/85">About</a></li>
+            <li><a href="contact.html" class="link-underline text-paper/85">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="eyebrow text-paper/50">Say kia ora</p>
+          <ul class="mt-4 space-y-3 text-paper/85">
+            <li><a href="mailto:hello@yoonspace.co.nz" class="link-underline">hello@yoonspace.co.nz</a></li>
+            <li><a href="tel:+6433660000" class="link-underline">+64 3 366 0000</a></li>
+            <li class="text-paper/60">High Street, Christchurch Central<br/>Ōtautahi 8011, Aotearoa NZ</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-14 flex flex-col gap-3 border-t border-paper/15 pt-6 font-mono text-xs text-paper/50 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Yoonspace Ltd. Ngā mihi.</p>
+        <p>Built on the Canterbury Plains.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/main.js" defer></script>
+</body>
+</html>

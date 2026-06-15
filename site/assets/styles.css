@@ -1,0 +1,138 @@
+/* ============================================================
+   Yoonspace — bespoke styles
+   Tailwind handles layout/spacing/responsive via the Play CDN.
+   This file owns the signature bits: orbit motion, marquee,
+   scroll reveals, type details, and the quality floor.
+   ============================================================ */
+
+:root {
+  --ink:        #161421;
+  --ink-2:      #1E1B2E;
+  --paper:      #F4F2EC;
+  --violet:     #5226E0;
+  --violet-700: #3D17B8;
+  --coral:      #FF5A36;
+  --amber:      #FFC24B;
+  --mist:       #E9E3FB;
+  --muted:      #56526A;
+}
+
+/* ---- Base ---- */
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-feature-settings: "ss01", "cv01";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--coral); color: #fff; }
+
+/* Fluid display type — handles "loads well on any device" for the big headings */
+.display-xl { font-size: clamp(2.75rem, 9vw, 7.5rem); line-height: 0.92; letter-spacing: -0.03em; }
+.display-lg { font-size: clamp(2.25rem, 6vw, 4.75rem); line-height: 0.95; letter-spacing: -0.025em; }
+.display-md { font-size: clamp(1.75rem, 4vw, 3rem);   line-height: 1.0;  letter-spacing: -0.02em; }
+.eyebrow {
+  font-family: "Space Mono", monospace;
+  font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase;
+}
+
+/* ---- Visible focus for keyboard users (quality floor) ---- */
+a:focus-visible, button:focus-visible, input:focus-visible,
+textarea:focus-visible, select:focus-visible, [tabindex]:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- Link underline that grows from the start ---- */
+.link-underline { position: relative; }
+.link-underline::after {
+  content: ""; position: absolute; left: 0; bottom: -3px; height: 2px; width: 100%;
+  background: currentColor; transform: scaleX(0); transform-origin: left;
+  transition: transform .35s cubic-bezier(.2,.7,.2,1);
+}
+.link-underline:hover::after, .link-underline:focus-visible::after { transform: scaleX(1); }
+
+/* ---- Buttons ---- */
+.btn { transition: transform .25s cubic-bezier(.2,.7,.2,1), background-color .25s, color .25s, box-shadow .25s; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+
+/* ============================================================
+   Signature: the orbit
+   ============================================================ */
+.orbit-stage { position: relative; display: inline-block; }
+.orbit-body {
+  position: absolute; top: 50%; left: 50%;
+  width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 999px;
+  /* an ellipse drawn as a motion path; the body rides it */
+  offset-path: path('M 0,-120 A 200,120 0 1,1 0,120 A 200,120 0 1,1 0,-120');
+  offset-rotate: 0deg;
+  animation: orbit 11s linear infinite;
+  will-change: offset-distance;
+}
+.orbit-body.b2 {
+  width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px;
+  offset-path: path('M 0,-70 A 260,70 0 1,1 0,70 A 260,70 0 1,1 0,-70');
+  animation-duration: 16s; animation-direction: reverse;
+}
+.orbit-ring {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  pointer-events: none;
+}
+@keyframes orbit { to { offset-distance: 100%; } }
+
+/* Floating nav: tighten + add shadow once the page scrolls */
+[data-nav][data-stuck] nav {
+  box-shadow: 0 12px 40px -12px rgba(22, 20, 33, 0.28);
+  background: rgba(244, 242, 236, 0.92);
+}
+
+/* Orbit glyph used in the logo */
+.logo-orbit { transform-origin: center; }
+
+/* ============================================================
+   Marquee
+   ============================================================ */
+.marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee__track { display: inline-flex; gap: 3.5rem; white-space: nowrap; animation: marquee 32s linear infinite; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ============================================================
+   Scroll reveal
+   ============================================================ */
+[data-reveal] {
+  opacity: 0; transform: translateY(26px);
+  transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal].is-in { opacity: 1; transform: none; }
+
+/* Big outlined "space" word treatment */
+.outline-word {
+  -webkit-text-stroke: 2px var(--ink);
+  color: transparent;
+}
+.violet .outline-word { -webkit-text-stroke-color: #fff; }
+
+/* Ticker number for stats */
+.stat-num { font-variant-numeric: tabular-nums; }
+
+/* Card lift */
+.card-lift { transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s, border-color .35s; }
+.card-lift:hover { transform: translateY(-6px); }
+
+/* Noise/texture-free divider arc */
+.arc { stroke: var(--violet); fill: none; }
+
+/* ---- Respect reduced motion: turn the room quiet ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .orbit-body, .marquee__track { animation: none !important; }
+  .orbit-body { offset-distance: 25%; }
+  .orbit-body.b2 { offset-distance: 60%; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .btn:hover, .card-lift:hover { transform: none; }
+}
