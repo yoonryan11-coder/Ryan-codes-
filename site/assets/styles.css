@@ -136,3 +136,47 @@ textarea:focus-visible, select:focus-visible, [tabindex]:focus-visible {
   [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
   .btn:hover, .card-lift:hover { transform: none; }
 }
+
+/* ============================================================
+   Depth & texture upgrade — lift the design off the flat
+   ============================================================ */
+
+/* Fine film grain over everything for richness (very subtle) */
+body::after {
+  content: ""; position: fixed; inset: 0; z-index: 35; pointer-events: none; opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Soft resting + hover shadows so cards feel layered, not flat */
+.card-lift { box-shadow: 0 1px 2px rgba(22,20,33,0.04), 0 18px 42px -30px rgba(22,20,33,0.5); }
+.card-lift:hover { box-shadow: 0 2px 4px rgba(22,20,33,0.06), 0 34px 64px -28px rgba(82,38,224,0.42); }
+
+/* Ambient glow blobs (used behind the hero) */
+.hero-glow { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.glow-blob { position: absolute; border-radius: 999px; }
+.glow-violet { width: 42rem; height: 42rem; top: -16rem; left: -8rem; filter: blur(90px); background: radial-gradient(circle, rgba(82,38,224,0.42), transparent 62%); }
+.glow-coral  { width: 34rem; height: 34rem; top: -3rem; right: -10rem; filter: blur(90px); background: radial-gradient(circle, rgba(255,90,54,0.30), transparent 62%); }
+.glow-amber  { width: 26rem; height: 26rem; bottom: -16rem; left: 28%; filter: blur(90px); background: radial-gradient(circle, rgba(255,194,75,0.26), transparent 62%); }
+
+/* Top sheen on dark/colour sections so they read as lit surfaces */
+.sheen { position: relative; isolation: isolate; }
+.sheen > * { position: relative; z-index: 1; }
+.sheen::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(80% 120% at 50% -10%, rgba(255,255,255,0.10), transparent 60%);
+}
+
+/* Rich media placeholders: lit surface + orbit rings (until real photos land) */
+.thumb { position: relative; isolation: isolate; }
+.thumb > * { position: relative; z-index: 1; }
+.thumb::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(120% 90% at 22% 6%, rgba(255,255,255,0.28), transparent 55%),
+    radial-gradient(90% 75% at 94% 98%, rgba(0,0,0,0.24), transparent 60%);
+}
+.thumb::after {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0.5; mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cg fill='none' stroke='white' stroke-dasharray='2 7'%3E%3Cellipse cx='200' cy='150' rx='185' ry='115' transform='rotate(-8 200 150)'/%3E%3Cellipse cx='200' cy='150' rx='120' ry='72' transform='rotate(-8 200 150)'/%3E%3Cellipse cx='200' cy='150' rx='55' ry='32' transform='rotate(-8 200 150)'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: cover; background-position: center;
+}
