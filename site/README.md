@@ -20,8 +20,9 @@ Static HTML + Tailwind CSS. No build step required to view — just open `index.
 - **Concept:** *space* — room for brands to grow — grounded in Christchurch's story of
   rebuilding and reinvention. Signature motif: an **orbit** (the hero wordmark, the
   numbered process, the logo glyph).
-- **Colour:** electric violet `#5226E0`, coral-flare `#FF5A36`, amber `#FFC24B`,
-  warm paper `#F4F2EC`, ink `#161421`.
+- **Colour (cosmic theme):** starfield void `#05060F`, panel `#0E1124`,
+  nebula violet `#7C5CFF`, aurora cyan `#2FC6FF`, starlight gold `#FFD37A`,
+  text `#ECEEFB`. Dark, space-themed throughout with a fixed starfield + nebula glows.
 - **Type:** Bricolage Grotesque (display) · Space Grotesk (body) · Space Mono (labels/data),
   loaded from Google Fonts.
 

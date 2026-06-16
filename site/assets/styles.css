@@ -6,27 +6,38 @@
    ============================================================ */
 
 :root {
-  --ink:        #161421;
-  --ink-2:      #1E1B2E;
-  --paper:      #F4F2EC;
-  --violet:     #5226E0;
-  --violet-700: #3D17B8;
-  --coral:      #FF5A36;
-  --amber:      #FFC24B;
-  --mist:       #E9E3FB;
-  --muted:      #56526A;
+  --void:       #05060F;
+  --ink:        #070811;
+  --ink-2:      #11142C;
+  --paper:      #0E1124;
+  --mist:       #161A33;
+  --violet:     #7C5CFF;
+  --violet-700: #5B3FE6;
+  --coral:      #2FC6FF;  /* electric aurora cyan */
+  --amber:      #FFD37A;  /* warm starlight */
+  --pink:       #FF5DA2;
+  --star:       #ECEEFB;
+  --muted:      #A0A2CC;
 }
 
-/* ---- Base ---- */
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+/* ---- Base: the cosmos ---- */
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--void); }
 body {
-  background: var(--paper);
-  color: var(--ink);
+  color: var(--star);
+  background-color: var(--void);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320' viewBox='0 0 320 320'%3E%3Cg fill='%23ffffff'%3E%3Ccircle cx='20' cy='40' r='0.8' opacity='0.8'/%3E%3Ccircle cx='80' cy='120' r='0.6' opacity='0.5'/%3E%3Ccircle cx='140' cy='30' r='1' opacity='0.9'/%3E%3Ccircle cx='210' cy='90' r='0.7' opacity='0.6'/%3E%3Ccircle cx='280' cy='50' r='0.9' opacity='0.7'/%3E%3Ccircle cx='40' cy='200' r='0.7' opacity='0.6'/%3E%3Ccircle cx='110' cy='260' r='0.6' opacity='0.5'/%3E%3Ccircle cx='180' cy='210' r='1' opacity='0.85'/%3E%3Ccircle cx='250' cy='270' r='0.7' opacity='0.6'/%3E%3Ccircle cx='300' cy='180' r='0.8' opacity='0.7'/%3E%3Ccircle cx='160' cy='150' r='0.6' opacity='0.45'/%3E%3Ccircle cx='60' cy='300' r='0.9' opacity='0.7'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(900px 620px at 82% -8%, rgba(124,92,255,0.20), transparent 70%),
+    radial-gradient(760px 560px at 2% 108%, rgba(47,198,255,0.14), transparent 70%),
+    radial-gradient(700px 700px at 120% 60%, rgba(255,93,162,0.10), transparent 70%);
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 320px 320px, auto, auto, auto;
+  background-attachment: fixed;
   font-feature-settings: "ss01", "cv01";
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
-::selection { background: var(--coral); color: #fff; }
+::selection { background: var(--coral); color: #04121a; }
 
 /* Fluid display type — handles "loads well on any device" for the big headings */
 .display-xl { font-size: clamp(2.75rem, 9vw, 7.5rem); line-height: 0.92; letter-spacing: -0.03em; }
@@ -112,7 +123,7 @@ textarea:focus-visible, select:focus-visible, [tabindex]:focus-visible {
 
 /* Big outlined "space" word treatment */
 .outline-word {
-  -webkit-text-stroke: 2px var(--ink);
+  -webkit-text-stroke: 2px var(--star);
   color: transparent;
 }
 .violet .outline-word { -webkit-text-stroke-color: #fff; }
@@ -147,16 +158,16 @@ body::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* Soft resting + hover shadows so cards feel layered, not flat */
-.card-lift { box-shadow: 0 1px 2px rgba(22,20,33,0.04), 0 18px 42px -30px rgba(22,20,33,0.5); }
-.card-lift:hover { box-shadow: 0 2px 4px rgba(22,20,33,0.06), 0 34px 64px -28px rgba(82,38,224,0.42); }
+/* Depth shadows + glow so cards float like glass over space */
+.card-lift { box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 24px 50px -32px rgba(0,0,0,0.85); }
+.card-lift:hover { box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 26px 60px -28px rgba(124,92,255,0.55), 0 0 0 1px rgba(124,92,255,0.22); }
 
-/* Ambient glow blobs (used behind the hero) */
+/* Ambient nebula glow blobs (used behind the hero) */
 .hero-glow { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
 .glow-blob { position: absolute; border-radius: 999px; }
-.glow-violet { width: 42rem; height: 42rem; top: -16rem; left: -8rem; filter: blur(90px); background: radial-gradient(circle, rgba(82,38,224,0.42), transparent 62%); }
-.glow-coral  { width: 34rem; height: 34rem; top: -3rem; right: -10rem; filter: blur(90px); background: radial-gradient(circle, rgba(255,90,54,0.30), transparent 62%); }
-.glow-amber  { width: 26rem; height: 26rem; bottom: -16rem; left: 28%; filter: blur(90px); background: radial-gradient(circle, rgba(255,194,75,0.26), transparent 62%); }
+.glow-violet { width: 42rem; height: 42rem; top: -16rem; left: -8rem; filter: blur(95px); background: radial-gradient(circle, rgba(124,92,255,0.45), transparent 62%); }
+.glow-coral  { width: 34rem; height: 34rem; top: -3rem; right: -10rem; filter: blur(95px); background: radial-gradient(circle, rgba(47,198,255,0.32), transparent 62%); }
+.glow-amber  { width: 26rem; height: 26rem; bottom: -16rem; left: 28%; filter: blur(95px); background: radial-gradient(circle, rgba(255,93,162,0.22), transparent 62%); }
 
 /* Top sheen on dark/colour sections so they read as lit surfaces */
 .sheen { position: relative; isolation: isolate; }
