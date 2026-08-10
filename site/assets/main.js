@@ -98,7 +98,7 @@
     });
   }
 
-  /* ---- Contact form (front-end demo only) ---- */
+  /* ---- Contact form → Web3Forms (emails ryan@yoonspace.co.nz) ---- */
   var form = document.querySelector("[data-contact-form]");
   if (form) {
     form.addEventListener("submit", function (e) {
@@ -108,13 +108,35 @@
         form.reportValidity();
         return;
       }
-      var name = (form.querySelector("#name") || {}).value || "there";
-      if (note) {
-        note.hidden = false;
-        note.textContent = "Thanks, " + name.split(" ")[0] + ". Your brief is in. We reply within one working day.";
-        note.focus();
-      }
-      form.reset();
+      var btn = form.querySelector('button[type="submit"]');
+      var label = btn ? btn.textContent : "";
+      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+
+      var showNote = function (msg) {
+        if (note) { note.hidden = false; note.textContent = msg; note.focus(); }
+      };
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: new FormData(form)
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (json) {
+          if (json && json.success) {
+            var name = (form.querySelector("#name") || {}).value || "there";
+            showNote("Thanks, " + name.split(" ")[0] + ". Your brief is in — we reply within one working day.");
+            form.reset();
+          } else {
+            showNote("Sorry, something went wrong. Please email ryan@yoonspace.co.nz directly.");
+          }
+        })
+        .catch(function () {
+          showNote("Sorry, something went wrong. Please email ryan@yoonspace.co.nz directly.");
+        })
+        .then(function () {
+          if (btn) { btn.disabled = false; btn.textContent = label; }
+        });
     });
   }
 })();

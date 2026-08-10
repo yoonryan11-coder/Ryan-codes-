@@ -58,7 +58,11 @@
     <section class="px-5 pb-24 sm:px-8 sm:pb-28">
       <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.3fr_1fr] lg:gap-16">
         <!-- Form -->
-        <form data-contact-form novalidate class="rounded-4xl border border-white/10 bg-paper p-7 sm:p-10" data-reveal>
+        <form data-contact-form action="https://api.web3forms.com/submit" method="POST" novalidate class="rounded-4xl border border-white/10 bg-paper p-7 sm:p-10" data-reveal>
+          <input type="hidden" name="access_key" value="53b2a823-27e0-4b4b-a63d-c8c341297c06" />
+          <input type="hidden" name="subject" value="New project brief from yoonspace.co.nz" />
+          <input type="hidden" name="from_name" value="Yoonspace website" />
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="grid gap-6 sm:grid-cols-2">
             <div class="sm:col-span-1">
               <label for="name" class="block text-sm font-semibold">Your name</label>
@@ -90,7 +94,7 @@
           </div>
           <button type="submit" class="btn mt-7 w-full rounded-full bg-violet px-8 py-4 text-base font-semibold text-white hover:bg-violet-700 sm:w-auto">Send the brief</button>
           <p data-form-note hidden tabindex="-1" class="mt-5 rounded-xl bg-mist px-4 py-3 text-sm font-medium text-violet" role="status"></p>
-          <p class="mt-4 font-mono text-xs text-muted">This demo form runs in your browser. Wire it to your inbox or CRM before going live.</p>
+          <p class="mt-4 font-mono text-xs text-muted">We reply within one working day. Prefer email? <a href="mailto:ryan@yoonspace.co.nz" class="link-underline text-star">ryan@yoonspace.co.nz</a></p>
         </form>
 
         <!-- Details -->
