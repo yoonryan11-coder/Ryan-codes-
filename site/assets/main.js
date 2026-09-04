@@ -139,4 +139,22 @@
         });
     });
   }
+
+  /* ---- Click-to-play video facades (load YouTube only on click) ---- */
+  document.querySelectorAll("[data-yt]").forEach(function (el) {
+    el.addEventListener("click", function () {
+      var id = el.getAttribute("data-yt");
+      if (!id || el.getAttribute("data-loaded")) return;
+      el.setAttribute("data-loaded", "1");
+      var iframe = document.createElement("iframe");
+      iframe.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&playsinline=1";
+      iframe.title = el.getAttribute("aria-label") || "Video";
+      iframe.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture; web-share");
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.className = "absolute inset-0 h-full w-full";
+      iframe.style.border = "0";
+      el.innerHTML = "";
+      el.appendChild(iframe);
+    });
+  });
 })();
