@@ -51,6 +51,10 @@ body {
 
 ::selection { background: var(--coral); color: #04121a; }
 
+/* Every interactive control gets a pointer cursor, not just the ones that remembered to ask */
+button:not(:disabled), [role="button"], summary { cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+
 /* Fluid display type — handles "loads well on any device" for the big headings */
 .display-xl { font-size: clamp(2.75rem, 9vw, 7.5rem); line-height: 0.92; letter-spacing: -0.03em; }
 .display-lg { font-size: clamp(2.25rem, 6vw, 4.75rem); line-height: 0.95; letter-spacing: -0.025em; }
