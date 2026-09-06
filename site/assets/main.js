@@ -124,8 +124,10 @@
         .then(function (r) { return r.json(); })
         .then(function (json) {
           if (json && json.success) {
-            var name = (form.querySelector("#name") || {}).value || "there";
-            showNote("Thanks, " + name.split(" ")[0] + ". Your brief is in — we reply within one working day.");
+            var nameField = form.querySelector("#name") || form.querySelector("#contact_name");
+            var name = (nameField || {}).value || "there";
+            var successMsg = form.getAttribute("data-success-message") || "Your brief is in — we reply within one working day.";
+            showNote("Thanks, " + name.split(" ")[0] + ". " + successMsg);
             form.reset();
           } else {
             showNote("Sorry, something went wrong. Please email ryan@yoonspace.co.nz directly.");

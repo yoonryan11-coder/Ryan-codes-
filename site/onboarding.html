@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-NZ" style="background:#05060F">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Client Onboarding — Yoonspace</title>
+  <meta name="description" content="New client onboarding for Yoonspace. Tell us about your brand so we can get started." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#05060F" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161421'/%3E%3Cline x1='16' y1='9' x2='16' y2='23' stroke='white' stroke-width='1.5'/%3E%3Ctext x='9.6' y='21' font-family='Arial,Helvetica,sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3EY%3C/text%3E%3Ctext x='22.6' y='21' font-family='Arial,Helvetica,sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/tailwind.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="font-sans text-star antialiased">
+  <div class="cosmos" aria-hidden="true"><div class="stars stars-a"></div><div class="stars stars-b"></div><canvas class="planets-canvas" aria-hidden="true"></canvas></div>
+  <canvas class="earth-cursor" aria-hidden="true" width="40" height="40"></canvas>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-ink focus:text-star focus:px-4 focus:py-2 focus:rounded-full">Skip to content</a>
+
+  <header data-nav class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <nav class="mx-auto mt-3 flex max-w-7xl items-center justify-between gap-4 rounded-full border border-white/10 bg-paper/80 px-4 py-2.5 backdrop-blur-md transition-all duration-300 sm:mx-4 sm:px-5 lg:mx-auto" aria-label="Primary">
+      <a href="index.html" class="flex items-center gap-2.5 font-display text-lg font-extrabold tracking-tight" aria-label="Yoonspace home">
+        <span class="flex h-8 w-8 items-center justify-center gap-px rounded-lg bg-ink font-display text-sm font-extrabold leading-none text-star" aria-hidden="true"><span>Y</span><span class="h-3.5 w-px bg-white/50"></span><span>S</span></span>
+        Yoonspace
+      </a>
+      <div class="hidden items-center gap-7 md:flex">
+        <a href="work.html" class="link-underline text-sm font-medium">Work</a>
+        <a href="services.html" class="link-underline text-sm font-medium">Services</a>
+        <a href="about.html" class="link-underline text-sm font-medium">About</a>
+        <a href="contact.html" class="btn rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-star hover:bg-violet">Start a project</a>
+      </div>
+      <button data-nav-toggle class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" data-nav-menu class="hidden md:hidden">
+      <div class="mx-3 mt-2 rounded-4xl border border-white/10 bg-paper p-6 shadow-2xl shadow-ink/10">
+        <div class="flex flex-col gap-1 text-2xl font-display font-bold">
+          <a href="work.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Work</a>
+          <a href="services.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Services</a>
+          <a href="about.html" class="rounded-2xl px-3 py-3 hover:bg-mist">About</a>
+          <a href="contact.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Contact</a>
+        </div>
+        <a href="contact.html" class="btn mt-4 block rounded-full bg-coral px-5 py-3.5 text-center text-base font-semibold text-ink">Start a project</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="relative overflow-hidden px-5 pt-32 pb-10 sm:px-8 sm:pt-40">
+      <div class="hero-glow" aria-hidden="true"><span class="glow-blob glow-violet"></span><span class="glow-blob glow-coral"></span></div>
+      <div class="relative z-10 mx-auto max-w-4xl">
+        <p class="eyebrow text-violet" data-reveal>Client onboarding</p>
+        <h1 class="mt-6 font-display font-extrabold display-xl" data-reveal>Welcome<br class="hidden sm:block" /> aboard.</h1>
+        <p class="mt-8 max-w-2xl text-lg text-muted sm:text-xl" data-reveal>You're in — this is where we get to know your brand properly. Fill in what you can below; anything you skip, we'll just ask you about on our kickoff call. Ten minutes now saves a lot of back-and-forth later.</p>
+      </div>
+    </section>
+
+    <section class="px-5 pb-24 sm:px-8 sm:pb-28">
+      <form data-contact-form data-success-message="We've got your details — we'll be in touch shortly to kick things off." action="https://api.web3forms.com/submit" method="POST" novalidate class="mx-auto max-w-4xl space-y-6" data-reveal>
+        <input type="hidden" name="access_key" value="53b2a823-27e0-4b4b-a63d-c8c341297c06" />
+        <input type="hidden" name="subject" value="New client onboarding — yoonspace.co.nz" />
+        <input type="hidden" name="from_name" value="Yoonspace onboarding form" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <!-- 01 Business basics -->
+        <div class="rounded-4xl border border-white/10 bg-paper p-7 sm:p-10">
+          <div class="flex items-baseline gap-3">
+            <span class="font-mono text-sm text-violet">01</span>
+            <h2 class="font-display text-2xl font-bold">Business basics</h2>
+          </div>
+          <div class="mt-6 grid gap-6 sm:grid-cols-2">
+            <div>
+              <label for="business_name" class="block text-sm font-semibold">Business / brand name</label>
+              <input id="business_name" name="business_name" type="text" required class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="e.g. Yang's Fried Chicken" />
+            </div>
+            <div>
+              <label for="industry" class="block text-sm font-semibold">Industry</label>
+              <input id="industry" name="industry" type="text" required class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="e.g. Hospitality, retail, events…" />
+            </div>
+            <div>
+              <label for="contact_name" class="block text-sm font-semibold">Primary contact name</label>
+              <input id="contact_name" name="contact_name" type="text" required autocomplete="name" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="Your name" />
+            </div>
+            <div>
+              <label for="role" class="block text-sm font-semibold">Role <span class="font-normal text-muted">(optional)</span></label>
+              <input id="role" name="role" type="text" autocomplete="organization-title" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="Owner, manager…" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-semibold">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="you@business.co.nz" />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-semibold">Phone</label>
+              <input id="phone" name="phone" type="tel" required autocomplete="tel" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="027 123 4567" />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="website" class="block text-sm font-semibold">Website <span class="font-normal text-muted">(if you have one)</span></label>
+              <input id="website" name="website" type="text" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="www.yourbusiness.co.nz" />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="address" class="block text-sm font-semibold">Physical address <span class="font-normal text-muted">(if relevant — e.g. a café or store)</span></label>
+              <input id="address" name="address" type="text" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="Street, suburb, city" />
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 Brand & voice -->
+        <div class="rounded-4xl border border-white/10 bg-paper p-7 sm:p-10">
+          <div class="flex items-baseline gap-3">
+            <span class="font-mono text-sm text-violet">02</span>
+            <h2 class="font-display text-2xl font-bold">Brand &amp; voice</h2>
+          </div>
+          <div class="mt-6 grid gap-6 sm:grid-cols-2">
+            <div class="sm:col-span-2">
+              <label for="three_words" class="block text-sm font-semibold">Describe your brand in three words</label>
+              <input id="three_words" name="three_words" type="text" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="e.g. Bold, local, unpretentious" />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="ideal_customer" class="block text-sm font-semibold">Who's your ideal customer?</label>
+              <textarea id="ideal_customer" name="ideal_customer" rows="2" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="Age, interests, where they hang out — whatever you know."></textarea>
+            </div>
+            <div>
+              <label for="tone" class="block text-sm font-semibold">Tone of voice</label>
+              <select id="tone" name="tone" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet">
+                <option value="">Select one</option>
+                <option>Fun &amp; cheeky</option>
+                <option>Warm &amp; welcoming</option>
+                <option>Bold &amp; confident</option>
+                <option>Calm &amp; premium</option>
+                <option>Straight-talking</option>
+                <option>Not sure — you tell us</option>
+              </select>
+            </div>
+            <div>
+              <label for="brand_assets" class="block text-sm font-semibold">Logo &amp; brand assets link <span class="font-normal text-muted">(optional)</span></label>
+              <input id="brand_assets" name="brand_assets" type="text" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="Google Drive / Dropbox link" />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="avoid" class="block text-sm font-semibold">Anything we should avoid? <span class="font-normal text-muted">(topics, words, past campaigns that didn't land)</span></label>
+              <textarea id="avoid" name="avoid" rows="2" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 Socials & access -->
+        <div class="rounded-4xl border border-white/10 bg-paper p-7 sm:p-10">
+          <div class="flex items-baseline gap-3">
+            <span class="font-mono text-sm text-violet">03</span>
+            <h2 class="font-display text-2xl font-bold">Socials &amp; access</h2>
+          </div>
+          <div class="mt-6 grid gap-6 sm:grid-cols-2">
+            <div>
+              <label for="instagram" class="block text-sm font-semibold">Instagram handle</label>
+              <input id="instagram" name="instagram" type="text" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="@yourbusiness" />
+            </div>
+            <div>
+              <label for="facebook" class="block text-sm font-semibold">Facebook page</label>
+              <input id="facebook" name="facebook" type="text" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="facebook.com/yourbusiness" />
+            </div>
+            <div>
+              <label for="tiktok" class="block text-sm font-semibold">TikTok handle <span class="font-normal text-muted">(optional)</span></label>
+              <input id="tiktok" name="tiktok" type="text" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="@yourbusiness" />
+            </div>
+            <div>
+              <label for="other_platforms" class="block text-sm font-semibold">Other platforms <span class="font-normal text-muted">(optional)</span></label>
+              <input id="other_platforms" name="other_platforms" type="text" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="Google Business, LinkedIn…" />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="current_manager" class="block text-sm font-semibold">Who currently manages these accounts?</label>
+              <input id="current_manager" name="current_manager" type="text" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="You, a staff member, nobody currently…" />
+            </div>
+          </div>
+          <p class="mt-5 rounded-xl bg-mist px-4 py-3 font-mono text-xs text-muted">🔒 Please don't put any passwords here. Once we kick off, we'll set you up with proper admin access through Meta Business Suite (or similar) — never shared logins.</p>
+        </div>
+
+        <!-- 04 Goals & competitors -->
+        <div class="rounded-4xl border border-white/10 bg-paper p-7 sm:p-10">
+          <div class="flex items-baseline gap-3">
+            <span class="font-mono text-sm text-violet">04</span>
+            <h2 class="font-display text-2xl font-bold">Goals &amp; competitors</h2>
+          </div>
+          <div class="mt-6 grid gap-6 sm:grid-cols-2">
+            <div class="sm:col-span-2">
+              <label for="primary_goal" class="block text-sm font-semibold">What's the main goal right now?</label>
+              <select id="primary_goal" name="primary_goal" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet">
+                <option value="">Select one</option>
+                <option>More bookings / foot traffic</option>
+                <option>More followers &amp; engagement</option>
+                <option>More online sales</option>
+                <option>Brand awareness</option>
+                <option>Launching something new</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="key_dates" class="block text-sm font-semibold">Any key dates coming up? <span class="font-normal text-muted">(launches, promos, events)</span></label>
+              <input id="key_dates" name="key_dates" type="text" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="e.g. New menu launch mid-March" />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="competitors" class="block text-sm font-semibold">2–3 competitors or brands you admire</label>
+              <textarea id="competitors" name="competitors" rows="2" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 Content & logistics -->
+        <div class="rounded-4xl border border-white/10 bg-paper p-7 sm:p-10">
+          <div class="flex items-baseline gap-3">
+            <span class="font-mono text-sm text-violet">05</span>
+            <h2 class="font-display text-2xl font-bold">Content &amp; logistics</h2>
+          </div>
+          <div class="mt-6 grid gap-6 sm:grid-cols-2">
+            <div class="sm:col-span-2">
+              <label for="highlight" class="block text-sm font-semibold">Key products / services to highlight</label>
+              <textarea id="highlight" name="highlight" rows="2" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet"></textarea>
+            </div>
+            <div>
+              <label for="existing_media" class="block text-sm font-semibold">Existing photo/video link <span class="font-normal text-muted">(optional)</span></label>
+              <input id="existing_media" name="existing_media" type="text" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="Google Drive / Dropbox link" />
+            </div>
+            <div>
+              <label for="approval" class="block text-sm font-semibold">Content approval preference</label>
+              <select id="approval" name="approval" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet">
+                <option value="">Select one</option>
+                <option>Approve every post before it goes up</option>
+                <option>Weekly batch review</option>
+                <option>Trust the Yoonspace team fully</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="billing_email" class="block text-sm font-semibold">Billing contact <span class="font-normal text-muted">(if different from above)</span></label>
+              <input id="billing_email" name="billing_email" type="email" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet" placeholder="accounts@business.co.nz" />
+            </div>
+            <div class="sm:col-span-2">
+              <label for="notes" class="block text-sm font-semibold">Anything else we should know?</label>
+              <textarea id="notes" name="notes" rows="3" class="mt-2 w-full rounded-xl border border-white/15 bg-mist px-4 py-3 text-base outline-none transition-colors focus:border-violet"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-4xl bg-violet px-7 py-8 text-center sm:px-10">
+          <button type="submit" class="btn w-full rounded-full bg-ink px-8 py-4 text-base font-semibold text-star hover:bg-black sm:w-auto">Submit onboarding details</button>
+          <p data-form-note hidden tabindex="-1" class="mt-5 rounded-xl bg-white/10 px-4 py-3 text-sm font-medium text-white" role="status"></p>
+          <p class="mt-4 font-mono text-xs text-white/70">Prefer to talk it through instead? Email <a href="mailto:ryan@yoonspace.co.nz" class="link-underline text-white">ryan@yoonspace.co.nz</a></p>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-ink px-5 py-16 text-star sm:px-8">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="flex items-center gap-2.5 font-display text-2xl font-extrabold">
+            <span class="flex h-9 w-9 items-center justify-center gap-px rounded-lg bg-mist font-display text-base font-extrabold leading-none text-star" aria-hidden="true"><span>Y</span><span class="h-4 w-px bg-white/40"></span><span>S</span></span>
+            Yoonspace
+          </a>
+          <p class="mt-5 max-w-xs text-star/60">A digital marketing studio in Ōtautahi Christchurch. We voice what you have, and give your brand the space to grow.</p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="eyebrow text-star/50">Explore</p>
+          <ul class="mt-4 space-y-3">
+            <li><a href="work.html" class="link-underline text-star/85">Work</a></li>
+            <li><a href="services.html" class="link-underline text-star/85">Services</a></li>
+            <li><a href="about.html" class="link-underline text-star/85">About</a></li>
+            <li><a href="contact.html" class="link-underline text-star/85">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="eyebrow text-star/50">Say kia ora</p>
+          <ul class="mt-4 space-y-3 text-star/85">
+            <li><a href="mailto:ryan@yoonspace.co.nz" class="link-underline">ryan@yoonspace.co.nz</a></li>
+            <li><a href="https://www.instagram.com/_yoon_space_/" target="_blank" rel="noopener" class="link-underline">@_yoon_space_</a></li>
+            <li><a href="tel:+64273758313" class="link-underline">027 375 8313</a></li>
+            <li class="text-star/60">Ōtautahi Christchurch<br/>Aotearoa New Zealand</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-14 flex flex-col gap-3 border-t border-white/15 pt-6 font-mono text-xs text-star/50 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Yoonspace Ltd. Ngā mihi.</p>
+        <p>Built on the Canterbury Plains.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/main.js" defer></script>
+</body>
+</html>
