@@ -161,15 +161,15 @@
   });
 
   /* ============================================================
-     Earth cursor + scattered planets — desktop-only orbital toy.
-     Skipped on touch devices and when reduced-motion is requested.
+     Scattered planets — desktop-only ambient toy. Drift, bounce off
+     the viewport edges and off each other. Skipped on touch devices
+     and when reduced-motion is requested.
      ============================================================ */
   var fine = window.matchMedia && window.matchMedia("(pointer: fine)").matches;
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var canvas = document.querySelector(".planets-canvas");
-  var cursorEl = document.querySelector(".earth-cursor");
 
-  if (fine && !reduce && canvas && cursorEl && window.requestAnimationFrame) {
+  if (fine && !reduce && canvas && window.requestAnimationFrame) {
     var ctx = canvas.getContext("2d");
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
     var W = 0, H = 0;
@@ -228,72 +228,6 @@
       ctx.restore();
     }
 
-    /* ---- Cursor tracking + Earth sprite ---- */
-    var mouseX = -999, mouseY = -999, lastX = -999, lastY = -999, mvx = 0, mvy = 0, seen = false;
-    var CURSOR_R = 15;
-
-    var sprite = document.createElement("canvas");
-    sprite.width = 40; sprite.height = 40;
-    (function drawEarth() {
-      var sc = sprite.getContext("2d");
-      var cx = 20, cy = 20, r = 15;
-      sc.save();
-      sc.shadowColor = "#2FC6FF";
-      sc.shadowBlur = 10;
-      var oceans = sc.createRadialGradient(cx - 5, cy - 5, 2, cx, cy, r);
-      oceans.addColorStop(0, "#5FD3FF");
-      oceans.addColorStop(0.55, "#1F7FE0");
-      oceans.addColorStop(1, "#0E3F8C");
-      sc.fillStyle = oceans;
-      sc.beginPath(); sc.arc(cx, cy, r, 0, Math.PI * 2); sc.fill();
-      sc.restore();
-
-      sc.save();
-      sc.beginPath(); sc.arc(cx, cy, r, 0, Math.PI * 2); sc.clip();
-      sc.fillStyle = "rgba(76, 187, 96, 0.92)";
-      sc.beginPath(); sc.ellipse(cx - 6, cy - 4, 6, 4.5, 0.4, 0, Math.PI * 2); sc.fill();
-      sc.beginPath(); sc.ellipse(cx + 5, cy + 3, 5, 7, -0.3, 0, Math.PI * 2); sc.fill();
-      sc.beginPath(); sc.ellipse(cx - 2, cy + 8, 4, 3, 0.2, 0, Math.PI * 2); sc.fill();
-      sc.fillStyle = "rgba(255,255,255,0.85)";
-      sc.beginPath(); sc.ellipse(cx + 3, cy - 9, 5, 2.4, -0.2, 0, Math.PI * 2); sc.fill();
-      sc.restore();
-
-      var shine = sc.createRadialGradient(cx - 6, cy - 6, 0, cx - 6, cy - 6, r * 1.1);
-      shine.addColorStop(0, "rgba(255,255,255,0.55)");
-      shine.addColorStop(1, "rgba(255,255,255,0)");
-      sc.fillStyle = shine;
-      sc.beginPath(); sc.arc(cx, cy, r, 0, Math.PI * 2); sc.fill();
-    })();
-
-    var cctx = cursorEl.getContext("2d");
-    cursorEl.width = 40; cursorEl.height = 40;
-    cctx.drawImage(sprite, 0, 0);
-
-    var hovering = false;
-    document.addEventListener("mouseover", function (e) {
-      var t = e.target.closest && e.target.closest("a, button, [role='button'], input, textarea, select, [data-yt]");
-      hovering = !!t;
-    }, { passive: true });
-
-    document.addEventListener("mousemove", function (e) {
-      lastX = mouseX; lastY = mouseY;
-      mouseX = e.clientX; mouseY = e.clientY;
-      if (lastX > -999) { mvx = mouseX - lastX; mvy = mouseY - lastY; }
-      if (!seen) {
-        seen = true;
-        document.documentElement.classList.add("earth-cursor-active");
-        cursorEl.classList.add("is-visible");
-      }
-      cursorEl.style.transform = "translate3d(" + mouseX + "px," + mouseY + "px,0) scale(" + (hovering ? 1.35 : 1) + ")";
-    }, { passive: true });
-
-    document.addEventListener("mouseleave", function () {
-      cursorEl.classList.remove("is-visible");
-    });
-    document.addEventListener("mouseenter", function () {
-      if (seen) cursorEl.classList.add("is-visible");
-    });
-
     var MAX_V = 3.2;
     function clampV(p) {
       var s = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
@@ -312,18 +246,6 @@
         if (p.x + p.r > W) { p.x = W - p.r; p.vx *= -1; }
         if (p.y - p.r < 0) { p.y = p.r; p.vy *= -1; }
         if (p.y + p.r > H) { p.y = H - p.r; p.vy *= -1; }
-
-        // Earth cursor collision — knock the planet away
-        var dx = p.x - mouseX, dy = p.y - mouseY;
-        var dist = Math.sqrt(dx * dx + dy * dy);
-        var minDist = p.r + CURSOR_R;
-        if (dist < minDist && dist > 0.001) {
-          var nx = dx / dist, ny = dy / dist;
-          var overlap = minDist - dist;
-          p.x += nx * overlap; p.y += ny * overlap;
-          p.vx = nx * 2.4 + mvx * 0.35;
-          p.vy = ny * 2.4 + mvy * 0.35;
-        }
         clampV(p);
       }
 
