@@ -5,25 +5,23 @@
 | | |
 |---|---|
 | **Purpose** | First video out. Builds momentum for the series. |
-| **Runtime** | 35–40 seconds |
+| **Runtime** | 30–35 seconds |
 | **Format** | Vertical 9:16 (Reels / TikTok / Shorts). Crop a 1:1 for feed. |
 | **Talent** | Ibrahim leads. Behooz closes. |
 | **Location** | Salon Be, 54 Holmwood Road, Merivale, Christchurch |
-| **Tone** | Warm, confident, unhurried. One conversation, not a list of claims. Real salon sound under it, music only rises for the end card. |
+| **Tone** | Warm, confident, unhurried. Ibrahim talking to one person, not presenting. Real salon sound under it, music rises for the end card. |
 
 ---
 
 ### The script (read-through)
 
-> **IBRAHIM:** Six years ago, I opened a salon here in Merivale.
+> **IBRAHIM:** Six years ago, I opened a salon here.
 >
 > *(foils, scissors, dryer, a client laughing in the chair)*
 >
-> **IBRAHIM:** And I built it around one idea. Get the best people, and give them time to do it properly.
+> **IBRAHIM:** And I built it around one idea. High quality service, from expert stylists with over thirty years of experience.
 >
-> **IBRAHIM:** The stylists in this room have been doing hair for thirty years, on average. Colour, cuts, keratin, blow waves.
->
-> **IBRAHIM:** But the first thing we do is sit down and talk about your hair. What you want, what it needs. Then we get started.
+> **IBRAHIM:** Colour, cuts, keratin, blow waves. Whatever you're after, we walk you through it, step by step.
 >
 > *(Behooz finishes a blow wave. The client flicks her hair. He turns to camera.)*
 >
@@ -39,26 +37,24 @@
 
 | # | Time | Visual | Audio / Dialogue | Notes |
 |---|---|---|---|---|
-| 1 | 0:00–0:05 | Ibrahim at the front of the salon, mid-shot, natural window light. Straight down the lens. | **IBRAHIM:** Six years ago, I opened a salon here in Merivale. | Hold on Ibrahim. No cuts yet. Let it land. |
-| 2 | 0:05–0:10 | Quick cuts, ~1.2s each: foils going in · scissors mid-cut · dryer on a section · client laughing in the chair. | Salon ambience up. No VO. | Cut on the beat. The laugh is the hero clip, give it the longest hold. |
-| 3 | 0:10–0:16 | Ibrahim walks the floor toward camera. Stylists working around him, nobody looks up. | **IBRAHIM (VO into on-camera):** And I built it around one idea. Get the best people, and give them time to do it properly. | This is the quality promise. Said plainly, not sold. Steady handheld walk or slow push-in. |
-| 4 | 0:16–0:22 | Four fast inserts on the four words: colour bowl mixing · clean cut line · smooth keratin finish · blow wave in the mirror. | **IBRAHIM (VO):** The stylists in this room have been doing hair for thirty years, on average. Colour, cuts, keratin, blow waves. | Match each insert to its word. |
-| 5 | 0:22–0:29 | Ibrahim close-up. Then a short insert of a stylist and client in the mirror, talking, hands off the hair. Back to Ibrahim. | **IBRAHIM:** But the first thing we do is sit down and talk about your hair. What you want, what it needs. Then we get started. | The consultation insert sells the line. Hands off the hair until "Then we get started". |
-| 6 | 0:29–0:34 | Behooz finishing a blow wave. Client flicks her hair. Behooz turns to camera. | **BEHOOZ:** I'm Behooz. *[one line, see options below]* | Shoot the flick 2–3 times. The turn should feel like he's just noticed us. |
-| 7 | 0:34–0:38 | Back to Ibrahim, same framing as shot 1. Small smile. | **IBRAHIM:** Come in and see the difference for yourself. See you in the chair. | Match shot 1 exactly so the video bookends. Tiny beat between the two lines. |
-| 8 | 0:38–0:42 | End card over slow-motion hero clip (hair flick or client laughing). | Music rises, ambience fades. | See on-screen text below. |
+| 1 | 0:00–0:04 | Ibrahim at the front of the salon, mid-shot, natural window light. Straight down the lens. | **IBRAHIM:** Six years ago, I opened a salon here. | Hold on Ibrahim. No cuts yet. Let it land. |
+| 2 | 0:04–0:09 | Quick cuts, ~1.2s each: foils going in · scissors mid-cut · dryer on a section · client laughing in the chair. | Salon ambience up. No VO. | Cut on the beat. The laugh is the hero clip, give it the longest hold. |
+| 3 | 0:09–0:16 | Ibrahim walks the floor toward camera. Stylists working around him, nobody looks up. Land on Ibrahim, on camera, for "thirty years". | **IBRAHIM (VO into on-camera):** And I built it around one idea. High quality service, from expert stylists with over thirty years of experience. | This is the promise. Say it plainly. "Thirty years" on camera, not VO. |
+| 4 | 0:16–0:23 | Four fast inserts on the four words: colour bowl mixing · clean cut line · smooth keratin finish · blow wave in the mirror. Then a stylist and client talking in the mirror. | **IBRAHIM (VO):** Colour, cuts, keratin, blow waves. Whatever you're after, we walk you through it, step by step. | Match each insert to its word. The mirror conversation carries "step by step". |
+| 5 | 0:23–0:29 | Behooz finishing a blow wave. Client flicks her hair. Behooz turns to camera. | **BEHOOZ:** I'm Behooz. *[one line, see options below]* | Shoot the flick 2–3 times. The turn should feel like he's just noticed us. |
+| 6 | 0:29–0:33 | Back to Ibrahim, same framing as shot 1. Small smile. | **IBRAHIM:** Come in and see the difference for yourself. See you in the chair. | Match shot 1 exactly so the video bookends. Tiny beat between the two lines. |
+| 7 | 0:33–0:37 | End card over slow-motion hero clip (hair flick or client laughing). | Music rises, ambience fades. | See on-screen text below. |
 
 ---
 
-### Why it reads smoother now
+### Line-by-line notes
 
-- **One through-line.** Opened a salon → built it around a belief → here's the proof (experience, services) → here's how it feels (the consultation) → come see. Each line hands off to the next.
-- **The quality promise lives in shot 3.** "Get the best people, and give them time to do it properly" says service quality without using the words "service quality". Viewers trust a specific over a slogan.
-- **"Thirty years, on average"** moved to the end of the sentence so the number is the punch.
-- **"Sit down and talk"** replaces "we always talk before we touch it". Same idea, softer and more visual.
-- **New close line** "Come in and see the difference for yourself" gives the call to action a reason, then "See you in the chair" keeps the warm sign-off.
+- **"I opened a salon here."** Kept your cut of "in Merivale". The address is on the end card and the lower third, so the spoken line stays short.
+- **"High quality service, from expert stylists with over thirty years of experience."** Your line, with "staff" changed to "stylists" so it sounds like a salon, not a company. Ibrahim should pause after "one idea" and let the second sentence be the answer.
+- **"Whatever you're after, we walk you through it, step by step."** Your "step by step" idea, reworded so it flows when spoken. "Walk you through it" is the consultation promise and gives the editor a mirror shot to cut to.
+- **The close** is unchanged. It's a good close.
 
-If it runs long on the day, the first cut is "What you want, what it needs." The second is "here" in the opening line.
+If it runs long on the day, cut "Whatever you're after," first.
 
 ---
 
@@ -80,13 +76,13 @@ One breath. If a take runs long, cut it in the edit rather than reshooting.
 **Lower third (shot 1, from 0:01):**
 > Ibrahim · Owner, Salon Be
 
-**Lower third (shot 6, on the turn to camera):**
+**Text beat (shot 3, on "thirty years"):**
+> 30+ years' experience
+
+**Lower third (shot 5, on the turn to camera):**
 > Behooz · Stylist, Salon Be
 
-**Optional text beat (shot 4, over the inserts):**
-> 30 years' experience, on average
-
-**End card (shot 8):**
+**End card (shot 7):**
 > **Salon Be**
 > 54 Holmwood Road, Merivale
 > Message us or book at **salonbe.co.nz**
@@ -100,8 +96,8 @@ Keep the end card up for at least 3 seconds. Address on one line, URL on its own
 **Burnt-in captions:** Yes, every spoken line. Most people watch muted.
 
 **Caption copy (post text):**
-> Six years in Merivale. Thirty years' experience in every chair.
-> We sit down and talk about your hair before we pick up the scissors.
+> Six years in Merivale. Over 30 years' experience in the chair.
+> Colour, cuts, keratin, blow waves. We walk you through it, step by step.
 > Come in and see the difference.
 > 📍 54 Holmwood Road · Book at salonbe.co.nz
 
@@ -116,9 +112,9 @@ Keep the end card up for at least 3 seconds. Address on one line, URL on its own
 
 - [ ] Ibrahim: two takes of each line, one warm, one a touch faster.
 - [ ] B-roll: foils, scissors, dryer, client laugh, colour mix, cut line, keratin finish, mirror blow wave. 10–15s of each.
-- [ ] Consultation insert: stylist and client talking in the mirror, hands off the hair.
+- [ ] Consultation insert: stylist and client talking in the mirror.
 - [ ] Behooz: hair flick ×3, turn to camera ×3, line ×3.
 - [ ] Floor walk-through with Ibrahim ×2.
 - [ ] Clean room tone, 30s, for the edit.
 - [ ] Client consent on camera for anyone shown in the chair.
-- [ ] Shot 1 and shot 7 framed identically.
+- [ ] Shot 1 and shot 6 framed identically.
