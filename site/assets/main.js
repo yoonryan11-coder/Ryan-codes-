@@ -128,6 +128,7 @@
             var name = (nameField || {}).value || "there";
             var successMsg = form.getAttribute("data-success-message") || "Your brief is in — we reply within one working day.";
             showNote("Thanks, " + name.split(" ")[0] + ". " + successMsg);
+          if (window.fbq) fbq("track", "Lead");
             form.reset();
           } else {
             showNote("Sorry, something went wrong. Please email ryan@yoonspace.co.nz directly.");
