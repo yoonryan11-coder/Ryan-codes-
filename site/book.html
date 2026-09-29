@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-NZ" style="background:#05060F">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a time — Yoonspace</title>
+  <meta name="description" content="Book a storyboard session or a filming shoot with Yoonspace, the digital marketing studio in Ōtautahi Christchurch. Pick a time that suits and it goes straight in the calendar." />
+  <meta name="theme-color" content="#05060F" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161421'/%3E%3Cline x1='16' y1='9' x2='16' y2='23' stroke='white' stroke-width='1.5'/%3E%3Ctext x='9.6' y='21' font-family='Arial,Helvetica,sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3EY%3C/text%3E%3Ctext x='22.6' y='21' font-family='Arial,Helvetica,sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://app.cal.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/tailwind.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="font-sans text-star antialiased">
+  <div class="cosmos" aria-hidden="true"><div class="stars stars-a"></div><div class="stars stars-b"></div><canvas class="planets-canvas" aria-hidden="true"></canvas></div>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-ink focus:text-star focus:px-4 focus:py-2 focus:rounded-full">Skip to content</a>
+
+  <header data-nav class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <nav class="mx-auto mt-3 flex max-w-7xl items-center justify-between gap-4 rounded-full border border-white/10 bg-paper/80 px-4 py-2.5 backdrop-blur-md transition-all duration-300 sm:mx-4 sm:px-5 lg:mx-auto" aria-label="Primary">
+      <a href="index.html" class="flex items-center gap-2.5 font-display text-lg font-extrabold tracking-tight" aria-label="Yoonspace home">
+        <span class="flex h-8 w-8 items-center justify-center gap-px rounded-lg bg-ink font-display text-sm font-extrabold leading-none text-star" aria-hidden="true"><span>Y</span><span class="h-3.5 w-px bg-white/50"></span><span>S</span></span>
+        Yoonspace
+      </a>
+      <div class="hidden items-center gap-7 md:flex">
+        <a href="work.html" class="link-underline text-sm font-medium">Work</a>
+        <a href="services.html" class="link-underline text-sm font-medium">Services</a>
+        <a href="about.html" class="link-underline text-sm font-medium">About</a>
+        <a href="book.html" class="link-underline text-sm font-semibold text-violet">Book</a>
+        <a href="contact.html" class="btn rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-star hover:bg-violet">Start a project</a>
+      </div>
+      <button data-nav-toggle class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" data-nav-menu class="hidden md:hidden">
+      <div class="mx-3 mt-2 rounded-4xl border border-white/10 bg-paper p-6 shadow-2xl shadow-ink/10">
+        <div class="flex flex-col gap-1 text-2xl font-display font-bold">
+          <a href="work.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Work</a>
+          <a href="services.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Services</a>
+          <a href="about.html" class="rounded-2xl px-3 py-3 hover:bg-mist">About</a>
+          <a href="book.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Book a time</a>
+          <a href="contact.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Contact</a>
+        </div>
+        <a href="contact.html" class="btn mt-4 block rounded-full bg-coral px-5 py-3.5 text-center text-base font-semibold text-ink">Start a project</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="relative overflow-hidden px-5 pt-32 pb-10 sm:px-8 sm:pt-40">
+      <div class="hero-glow" aria-hidden="true"><span class="glow-blob glow-violet"></span><span class="glow-blob glow-coral"></span></div>
+      <div class="relative z-10 mx-auto max-w-7xl">
+        <p class="eyebrow text-violet" data-reveal>Book a time</p>
+        <h1 class="mt-6 max-w-4xl font-display font-extrabold display-xl" data-reveal>Pick a slot.<br class="hidden sm:block" /> We'll be there.</h1>
+        <p class="mt-8 max-w-2xl text-lg text-muted sm:text-xl" data-reveal>Choose the kind of session you need, grab a time that suits, and it lands straight in both our calendars — confirmation email included. No back-and-forth.</p>
+      </div>
+    </section>
+
+    <!-- What you can book -->
+    <section class="px-5 pb-10 sm:px-8 sm:pb-14">
+      <div class="mx-auto grid max-w-7xl gap-5 md:grid-cols-2">
+        <a href="#calendar" class="card-lift group rounded-4xl border border-white/10 bg-paper p-8 sm:p-10" data-reveal>
+          <span class="font-mono text-sm text-coral">01</span>
+          <h2 class="mt-4 font-display text-2xl font-bold sm:text-3xl">Storyboard session</h2>
+          <p class="mt-3 text-muted">We sit down (in person or on a call), dig into your story, and map out the content — what we're filming, where, who's in it and what it needs to say. You leave with a plan.</p>
+          <ul class="mt-5 flex flex-wrap gap-2 text-sm">
+            <li class="rounded-full bg-mist px-3 py-1.5">New clients</li>
+            <li class="rounded-full bg-mist px-3 py-1.5">Campaign planning</li>
+            <li class="rounded-full bg-mist px-3 py-1.5">Before every shoot</li>
+          </ul>
+          <span class="mt-7 inline-flex items-center gap-2 font-semibold text-violet">Choose a time <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span></span>
+        </a>
+        <a href="#calendar" class="card-lift group rounded-4xl border border-white/10 bg-paper p-8 sm:p-10" data-reveal style="--reveal-delay:60ms">
+          <span class="font-mono text-sm text-amber">02</span>
+          <h2 class="mt-4 font-display text-2xl font-bold sm:text-3xl">Filming shoot</h2>
+          <p class="mt-3 text-muted">We come to you with the gear and capture the content we planned — your space, your people, your product. Best booked once the storyboard is locked in.</p>
+          <ul class="mt-5 flex flex-wrap gap-2 text-sm">
+            <li class="rounded-full bg-mist px-3 py-1.5">On location</li>
+            <li class="rounded-full bg-mist px-3 py-1.5">Reels &amp; shorts</li>
+            <li class="rounded-full bg-mist px-3 py-1.5">Existing clients</li>
+          </ul>
+          <span class="mt-7 inline-flex items-center gap-2 font-semibold text-violet">Choose a time <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Calendar -->
+    <section id="calendar" class="scroll-mt-28 px-5 pb-24 sm:px-8 sm:pb-28">
+      <div class="mx-auto max-w-7xl">
+        <div class="overflow-hidden rounded-4xl border border-white/10 bg-paper" data-reveal>
+          <div class="flex flex-col gap-2 border-b border-white/10 px-6 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+            <p class="eyebrow text-violet">Live availability</p>
+            <p class="font-mono text-xs text-muted">Times shown in your timezone · NZST for us</p>
+          </div>
+          <div id="cal-inline" class="cal-embed" data-cal-fallback>
+            <div class="cal-embed__loading">
+              <p class="text-muted">Loading the calendar…</p>
+              <p class="mt-3 text-sm text-muted">Not showing? <a href="https://cal.com/ryan-yoon-4ksiko" target="_blank" rel="noopener" class="link-underline text-star">Open the booking page in a new tab</a>.</p>
+            </div>
+          </div>
+        </div>
+        <p class="mt-6 font-mono text-xs text-muted">Not sure which session you need? <a href="mailto:ryan@yoonspace.co.nz" class="link-underline text-star">Email ryan@yoonspace.co.nz</a> or call <a href="tel:+64273758313" class="link-underline text-star">027 375 8313</a> and we'll point you the right way.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink px-5 py-16 text-star sm:px-8">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="flex items-center gap-2.5 font-display text-2xl font-extrabold">
+            <span class="flex h-9 w-9 items-center justify-center gap-px rounded-lg bg-mist font-display text-base font-extrabold leading-none text-star" aria-hidden="true"><span>Y</span><span class="h-4 w-px bg-white/40"></span><span>S</span></span>
+            Yoonspace
+          </a>
+          <p class="mt-5 max-w-xs text-star/60">A digital marketing studio in Ōtautahi Christchurch. We voice what you have, and give your brand the space to grow.</p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="eyebrow text-star/50">Explore</p>
+          <ul class="mt-4 space-y-3">
+            <li><a href="work.html" class="link-underline text-star/85">Work</a></li>
+            <li><a href="services.html" class="link-underline text-star/85">Services</a></li>
+            <li><a href="about.html" class="link-underline text-star/85">About</a></li>
+            <li><a href="book.html" class="link-underline text-star/85">Book a time</a></li>
+            <li><a href="contact.html" class="link-underline text-star/85">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="eyebrow text-star/50">Say kia ora</p>
+          <ul class="mt-4 space-y-3 text-star/85">
+            <li><a href="mailto:ryan@yoonspace.co.nz" class="link-underline">ryan@yoonspace.co.nz</a></li>
+            <li><a href="https://www.instagram.com/_yoon_space_/" target="_blank" rel="noopener" class="link-underline">@_yoon_space_</a></li>
+            <li><a href="tel:+64273758313" class="link-underline">027 375 8313</a></li>
+            <li class="text-star/60">Ōtautahi Christchurch<br/>Aotearoa New Zealand</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-14 flex flex-col gap-3 border-t border-white/15 pt-6 font-mono text-xs text-star/50 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Yoonspace Ltd. Ngā mihi.</p>
+        <p>Built on the Canterbury Plains.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js" defer></script>
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", { origin: "https://app.cal.com" });
+    Cal("inline", {
+      elementOrSelector: "#cal-inline",
+      calLink: "ryan-yoon-4ksiko",
+      layout: "month_view",
+      config: { theme: "dark" }
+    });
+    Cal("ui", {
+      theme: "dark",
+      cssVarsPerTheme: { light: { "cal-brand": "#7C5CFF" }, dark: { "cal-brand": "#7C5CFF" } },
+      hideEventTypeDetails: false,
+      layout: "month_view"
+    });
+  </script>
+</body>
+</html>

@@ -209,6 +209,18 @@ body::after {
 }
 
 /* ============================================================
+   Cal.com booking embed
+   ============================================================ */
+.cal-embed { position: relative; min-height: 640px; }
+.cal-embed__loading {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; padding: 2rem; text-align: center;
+}
+/* Once Cal.com injects its iframe, hide the loading/fallback panel */
+.cal-embed:has(iframe) .cal-embed__loading { display: none; }
+.cal-embed iframe { position: relative; z-index: 1; }
+
+/* ============================================================
    Scattered planets (drift + bounce off each other)
    ============================================================ */
 .planets-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
