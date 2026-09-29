@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/tailwind.css?v=2026092902" />
-  <link rel="stylesheet" href="assets/styles.css?v=2026092902" />
+  <link rel="stylesheet" href="/assets/tailwind.css?v=2026092902" />
+  <link rel="stylesheet" href="/assets/styles.css?v=2026092902" />
   <!-- Meta Pixel Code -->
   <script>
   !function(f,b,e,v,n,t,s)
@@ -36,17 +36,17 @@
 
   <header data-nav class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
     <nav class="mx-auto mt-3 flex max-w-7xl items-center justify-between gap-4 rounded-full border border-white/10 bg-paper/80 px-4 py-2.5 backdrop-blur-md transition-all duration-300 sm:mx-4 sm:px-5 lg:mx-auto" aria-label="Primary">
-      <a href="index.html" class="flex items-center gap-2.5 font-display text-lg font-extrabold tracking-tight" aria-label="Yoonspace home">
+      <a href="/" class="flex items-center gap-2.5 font-display text-lg font-extrabold tracking-tight" aria-label="Yoonspace home">
         <span class="flex h-8 w-8 items-center justify-center gap-px rounded-lg bg-ink font-display text-sm font-extrabold leading-none text-star" aria-hidden="true"><span>Y</span><span class="h-3.5 w-px bg-white/50"></span><span>S</span></span>
         Yoonspace
       </a>
       <div class="hidden items-center gap-7 md:flex">
-        <a href="work.html" class="link-underline text-sm font-medium">Work</a>
-        <a href="services.html" class="link-underline text-sm font-medium">Services</a>
-        <a href="about.html" class="link-underline text-sm font-medium">About</a>
-        <a href="how-we-work.html" class="link-underline text-sm font-semibold text-violet">Process</a>
-        <a href="book.html" class="link-underline text-sm font-medium">Book</a>
-        <a href="contact.html" class="btn rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-star hover:bg-violet">Start a project</a>
+        <a href="/work" class="link-underline text-sm font-medium">Work</a>
+        <a href="/services" class="link-underline text-sm font-medium">Services</a>
+        <a href="/about" class="link-underline text-sm font-medium">About</a>
+        <a href="/how-we-work" class="link-underline text-sm font-semibold text-violet">Process</a>
+        <a href="/book" class="link-underline text-sm font-medium">Book</a>
+        <a href="/contact" class="btn rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-star hover:bg-violet">Start a project</a>
       </div>
       <button data-nav-toggle class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -55,14 +55,14 @@
     <div id="mobile-menu" data-nav-menu class="hidden md:hidden">
       <div class="mx-3 mt-2 rounded-4xl border border-white/10 bg-paper p-6 shadow-2xl shadow-ink/10">
         <div class="flex flex-col gap-1 text-2xl font-display font-bold">
-          <a href="work.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Work</a>
-          <a href="services.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Services</a>
-          <a href="about.html" class="rounded-2xl px-3 py-3 hover:bg-mist">About</a>
-          <a href="how-we-work.html" class="rounded-2xl px-3 py-3 hover:bg-mist">How we work</a>
-          <a href="book.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Book a time</a>
-          <a href="contact.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Contact</a>
+          <a href="/work" class="rounded-2xl px-3 py-3 hover:bg-mist">Work</a>
+          <a href="/services" class="rounded-2xl px-3 py-3 hover:bg-mist">Services</a>
+          <a href="/about" class="rounded-2xl px-3 py-3 hover:bg-mist">About</a>
+          <a href="/how-we-work" class="rounded-2xl px-3 py-3 hover:bg-mist">How we work</a>
+          <a href="/book" class="rounded-2xl px-3 py-3 hover:bg-mist">Book a time</a>
+          <a href="/contact" class="rounded-2xl px-3 py-3 hover:bg-mist">Contact</a>
         </div>
-        <a href="contact.html" class="btn mt-4 block rounded-full bg-coral px-5 py-3.5 text-center text-base font-semibold text-ink">Start a project</a>
+        <a href="/contact" class="btn mt-4 block rounded-full bg-coral px-5 py-3.5 text-center text-base font-semibold text-ink">Start a project</a>
       </div>
     </div>
   </header>
@@ -75,8 +75,8 @@
         <h1 class="mt-6 max-w-4xl font-display font-extrabold display-xl" data-reveal>No mystery.<br class="hidden sm:block" /> Just a sequence.</h1>
         <p class="mt-8 max-w-2xl text-lg text-muted sm:text-xl" data-reveal>Here's exactly what happens when you work with us — what we do, what you do, and how long each bit takes. If it sounds right, the first step is a free 15-minute call.</p>
         <div class="mt-8 flex flex-wrap gap-3" data-reveal>
-          <a href="book.html" class="btn rounded-full bg-violet px-7 py-4 text-base font-semibold text-white shadow-lg shadow-violet/25 hover:bg-violet-700">Book the 15-min call</a>
-          <a href="services.html" class="btn rounded-full border-2 border-white px-7 py-4 text-base font-semibold hover:bg-ink hover:text-star">See services</a>
+          <a href="/book" class="btn rounded-full bg-violet px-7 py-4 text-base font-semibold text-white shadow-lg shadow-violet/25 hover:bg-violet-700">Book the 15-min call</a>
+          <a href="/services" class="btn rounded-full border-2 border-white px-7 py-4 text-base font-semibold hover:bg-ink hover:text-star">See services</a>
         </div>
       </div>
     </section>
@@ -106,7 +106,7 @@
               <span class="font-mono text-xs text-coral">15 min · Free</span>
               <h3 class="mt-2 font-display text-2xl font-bold">Quick consultation</h3>
               <p class="mt-2 text-star/65">A free call about your business and what you want it to do. We listen, ask the right questions, and tell you honestly whether we can help.</p>
-              <a href="book.html" class="btn mt-5 inline-flex items-center gap-2 rounded-full border border-current px-4 py-2 text-sm font-semibold text-coral hover:bg-coral hover:text-ink">Book a consultation <span aria-hidden="true">→</span></a>
+              <a href="/book" class="btn mt-5 inline-flex items-center gap-2 rounded-full border border-current px-4 py-2 text-sm font-semibold text-coral hover:bg-coral hover:text-ink">Book a consultation <span aria-hidden="true">→</span></a>
             </div>
           </li>
           <li class="journey__step" data-reveal style="--reveal-delay:60ms">
@@ -123,7 +123,7 @@
               <span class="font-mono text-xs text-star/50">1 or 3 months · Quoted</span>
               <h3 class="mt-2 font-display text-2xl font-bold">Choose your retainer</h3>
               <p class="mt-2 text-star/65">A 1-month retainer for a short-term push, or 3 months for long-term growth. Your goals decide which — we'll recommend, you choose. Pricing is quoted to your brief.</p>
-              <a href="contact.html" class="btn mt-5 inline-flex items-center gap-2 rounded-full bg-star px-4 py-2 text-sm font-semibold text-ink hover:bg-violet hover:text-white">Start a project <span aria-hidden="true">→</span></a>
+              <a href="/contact" class="btn mt-5 inline-flex items-center gap-2 rounded-full bg-star px-4 py-2 text-sm font-semibold text-ink hover:bg-violet hover:text-white">Start a project <span aria-hidden="true">→</span></a>
             </div>
           </li>
           <li class="journey__step" data-reveal style="--reveal-delay:180ms">
@@ -132,7 +132,7 @@
               <span class="font-mono text-xs text-star/50">Once confirmed</span>
               <h3 class="mt-2 font-display text-2xl font-bold">Get set up</h3>
               <p class="mt-2 text-star/65">You get the onboarding form and we lock in your storyboard session dates — and filming sessions too, where we can. No passwords, just proper access.</p>
-              <a href="onboarding.html" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-star/80 link-underline">Already confirmed? Fill in the onboarding form <span aria-hidden="true">→</span></a>
+              <a href="/onboarding" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-star/80 link-underline">Already confirmed? Fill in the onboarding form <span aria-hidden="true">→</span></a>
             </div>
           </li>
           <li class="journey__step" data-reveal style="--reveal-delay:240ms">
@@ -141,7 +141,7 @@
               <span class="font-mono text-xs text-amber">Storyboard session</span>
               <h3 class="mt-2 font-display text-2xl font-bold">Plan it in detail</h3>
               <p class="mt-2 text-star/65">We confirm the filming session and get into the finer detail of every idea. The campaign brief comes out of this — it's what we script and plan from.</p>
-              <a href="book.html" class="btn mt-5 inline-flex items-center gap-2 rounded-full border border-current px-4 py-2 text-sm font-semibold text-amber hover:bg-amber hover:text-ink">Book a storyboard session <span aria-hidden="true">→</span></a>
+              <a href="/book" class="btn mt-5 inline-flex items-center gap-2 rounded-full border border-current px-4 py-2 text-sm font-semibold text-amber hover:bg-amber hover:text-ink">Book a storyboard session <span aria-hidden="true">→</span></a>
             </div>
           </li>
           <li class="journey__step" data-reveal style="--reveal-delay:300ms">
@@ -150,7 +150,7 @@
               <span class="font-mono text-xs text-pink">Filming shoot</span>
               <h3 class="mt-2 font-display text-2xl font-bold">Film, edit, launch</h3>
               <p class="mt-2 text-star/65">We film to the brief, edit it, and your campaigns start within 3 – 7 working days of the shoot.</p>
-              <a href="book.html" class="btn mt-5 inline-flex items-center gap-2 rounded-full border border-current px-4 py-2 text-sm font-semibold text-pink hover:bg-pink hover:text-ink">Lock in a filming day <span aria-hidden="true">→</span></a>
+              <a href="/book" class="btn mt-5 inline-flex items-center gap-2 rounded-full border border-current px-4 py-2 text-sm font-semibold text-pink hover:bg-pink hover:text-ink">Lock in a filming day <span aria-hidden="true">→</span></a>
             </div>
           </li>
           <li class="journey__step journey__step--last" data-reveal style="--reveal-delay:360ms">
@@ -159,7 +159,7 @@
               <span class="font-mono text-xs text-violet">4-week blocks</span>
               <h3 class="mt-2 font-display text-2xl font-bold">Run the block, then go again</h3>
               <p class="mt-2 text-star/65">Each block is four weeks. The goal is to maximise content across all three pillars, read the numbers, and plan the next one. General meetings keep it on track.</p>
-              <a href="book.html" class="btn mt-5 inline-flex items-center gap-2 rounded-full border border-current px-4 py-2 text-sm font-semibold text-violet hover:bg-violet hover:text-ink">Book a general meeting <span aria-hidden="true">→</span></a>
+              <a href="/book" class="btn mt-5 inline-flex items-center gap-2 rounded-full border border-current px-4 py-2 text-sm font-semibold text-violet hover:bg-violet hover:text-ink">Book a general meeting <span aria-hidden="true">→</span></a>
             </div>
           </li>
         </ol>
@@ -174,8 +174,8 @@
           <p class="mt-3 max-w-xl text-muted">Free, no pitch — just an honest chat about your business and whether we're the right fit. Pricing is quoted to your brief after that.</p>
         </div>
         <div class="mt-8 flex flex-wrap gap-3 lg:mt-0 lg:shrink-0">
-          <a href="book.html" class="btn rounded-full bg-violet px-7 py-4 text-base font-semibold text-white hover:bg-violet-700">Book a time</a>
-          <a href="contact.html" class="btn rounded-full border-2 border-white px-7 py-4 text-base font-semibold hover:bg-ink hover:text-star">Send a brief</a>
+          <a href="/book" class="btn rounded-full bg-violet px-7 py-4 text-base font-semibold text-white hover:bg-violet-700">Book a time</a>
+          <a href="/contact" class="btn rounded-full border-2 border-white px-7 py-4 text-base font-semibold hover:bg-ink hover:text-star">Send a brief</a>
         </div>
       </div>
     </section>
@@ -185,7 +185,7 @@
     <div class="mx-auto max-w-7xl">
       <div class="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr]">
         <div>
-          <a href="index.html" class="flex items-center gap-2.5 font-display text-2xl font-extrabold">
+          <a href="/" class="flex items-center gap-2.5 font-display text-2xl font-extrabold">
             <span class="flex h-9 w-9 items-center justify-center gap-px rounded-lg bg-mist font-display text-base font-extrabold leading-none text-star" aria-hidden="true"><span>Y</span><span class="h-4 w-px bg-white/40"></span><span>S</span></span>
             Yoonspace
           </a>
@@ -194,12 +194,12 @@
         <nav aria-label="Footer">
           <p class="eyebrow text-star/50">Explore</p>
           <ul class="mt-4 space-y-3">
-            <li><a href="work.html" class="link-underline text-star/85">Work</a></li>
-            <li><a href="services.html" class="link-underline text-star/85">Services</a></li>
-            <li><a href="about.html" class="link-underline text-star/85">About</a></li>
-            <li><a href="how-we-work.html" class="link-underline text-star/85">How we work</a></li>
-            <li><a href="book.html" class="link-underline text-star/85">Book a time</a></li>
-            <li><a href="contact.html" class="link-underline text-star/85">Contact</a></li>
+            <li><a href="/work" class="link-underline text-star/85">Work</a></li>
+            <li><a href="/services" class="link-underline text-star/85">Services</a></li>
+            <li><a href="/about" class="link-underline text-star/85">About</a></li>
+            <li><a href="/how-we-work" class="link-underline text-star/85">How we work</a></li>
+            <li><a href="/book" class="link-underline text-star/85">Book a time</a></li>
+            <li><a href="/contact" class="link-underline text-star/85">Contact</a></li>
           </ul>
         </nav>
         <div>
@@ -219,7 +219,7 @@
     </div>
   </footer>
 
-  <script src="assets/main.js?v=2026092902" defer></script>
-  <script src="assets/main.js?v=2026092902" defer></script>
+  <script src="/assets/main.js?v=2026092902" defer></script>
+  <script src="/assets/main.js?v=2026092902" defer></script>
 </body>
 </html>
