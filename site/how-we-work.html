@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-NZ" style="background:#05060F">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How we work — Yoonspace</title>
+  <meta name="description" content="How Yoonspace works: a free 15-minute consultation, three content pillars, a 1- or 3-month retainer, storyboard and filming sessions, then campaigns that run in four-week blocks." />
+  <meta name="theme-color" content="#05060F" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161421'/%3E%3Cline x1='16' y1='9' x2='16' y2='23' stroke='white' stroke-width='1.5'/%3E%3Ctext x='9.6' y='21' font-family='Arial,Helvetica,sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3EY%3C/text%3E%3Ctext x='22.6' y='21' font-family='Arial,Helvetica,sans-serif' font-size='13' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/tailwind.css?v=2026092901" />
+  <link rel="stylesheet" href="assets/styles.css?v=2026092901" />
+</head>
+<body class="font-sans text-star antialiased">
+  <div class="cosmos" aria-hidden="true"><div class="stars stars-a"></div><div class="stars stars-b"></div><canvas class="planets-canvas" aria-hidden="true"></canvas></div>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:bg-ink focus:text-star focus:px-4 focus:py-2 focus:rounded-full">Skip to content</a>
+
+  <header data-nav class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+    <nav class="mx-auto mt-3 flex max-w-7xl items-center justify-between gap-4 rounded-full border border-white/10 bg-paper/80 px-4 py-2.5 backdrop-blur-md transition-all duration-300 sm:mx-4 sm:px-5 lg:mx-auto" aria-label="Primary">
+      <a href="index.html" class="flex items-center gap-2.5 font-display text-lg font-extrabold tracking-tight" aria-label="Yoonspace home">
+        <span class="flex h-8 w-8 items-center justify-center gap-px rounded-lg bg-ink font-display text-sm font-extrabold leading-none text-star" aria-hidden="true"><span>Y</span><span class="h-3.5 w-px bg-white/50"></span><span>S</span></span>
+        Yoonspace
+      </a>
+      <div class="hidden items-center gap-7 md:flex">
+        <a href="work.html" class="link-underline text-sm font-medium">Work</a>
+        <a href="services.html" class="link-underline text-sm font-medium">Services</a>
+        <a href="about.html" class="link-underline text-sm font-medium">About</a>
+        <a href="how-we-work.html" class="link-underline text-sm font-semibold text-violet">Process</a>
+        <a href="book.html" class="link-underline text-sm font-medium">Book</a>
+        <a href="contact.html" class="btn rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-star hover:bg-violet">Start a project</a>
+      </div>
+      <button data-nav-toggle class="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" data-nav-menu class="hidden md:hidden">
+      <div class="mx-3 mt-2 rounded-4xl border border-white/10 bg-paper p-6 shadow-2xl shadow-ink/10">
+        <div class="flex flex-col gap-1 text-2xl font-display font-bold">
+          <a href="work.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Work</a>
+          <a href="services.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Services</a>
+          <a href="about.html" class="rounded-2xl px-3 py-3 hover:bg-mist">About</a>
+          <a href="how-we-work.html" class="rounded-2xl px-3 py-3 hover:bg-mist">How we work</a>
+          <a href="book.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Book a time</a>
+          <a href="contact.html" class="rounded-2xl px-3 py-3 hover:bg-mist">Contact</a>
+        </div>
+        <a href="contact.html" class="btn mt-4 block rounded-full bg-coral px-5 py-3.5 text-center text-base font-semibold text-ink">Start a project</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="relative overflow-hidden px-5 pt-32 pb-6 sm:px-8 sm:pt-40">
+      <div class="hero-glow" aria-hidden="true"><span class="glow-blob glow-violet"></span><span class="glow-blob glow-amber"></span></div>
+      <div class="relative z-10 mx-auto max-w-7xl">
+        <p class="eyebrow text-violet" data-reveal>How we work</p>
+        <h1 class="mt-6 max-w-4xl font-display font-extrabold display-xl" data-reveal>No mystery.<br class="hidden sm:block" /> Just a sequence.</h1>
+        <p class="mt-8 max-w-2xl text-lg text-muted sm:text-xl" data-reveal>Here's exactly what happens when you work with us — what we do, what you do, and how long each bit takes. If it sounds right, the first step is a free 15-minute call.</p>
+        <div class="mt-8 flex flex-wrap gap-3" data-reveal>
+          <a href="book.html" class="btn rounded-full bg-violet px-7 py-4 text-base font-semibold text-white shadow-lg shadow-violet/25 hover:bg-violet-700">Book the 15-min call</a>
+          <a href="services.html" class="btn rounded-full border-2 border-white px-7 py-4 text-base font-semibold hover:bg-ink hover:text-star">See services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How we work -->
+    <section class="sheen bg-ink mt-12 px-5 py-24 text-star sm:px-8 sm:py-28">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
+        <div class="lg:sticky lg:top-28 lg:self-start" data-reveal>
+          <p class="eyebrow text-amber">How we work</p>
+          <h2 class="mt-4 font-display font-bold display-lg">From first call to full orbit.</h2>
+          <p class="mt-5 max-w-md text-lg text-star/65">The actual sequence, start to finish. Four of the steps are things you book yourself — the rest is us doing the work.</p>
+          <div class="mt-8 rounded-3xl border border-white/10 bg-paper/70 p-6">
+            <p class="font-mono text-xs text-star/50">Every campaign is built on three pillars</p>
+            <ul class="mt-3 flex flex-wrap gap-2 text-sm font-semibold">
+              <li class="rounded-full bg-coral/15 px-3 py-1.5 text-coral">Brand awareness</li>
+              <li class="rounded-full bg-amber/15 px-3 py-1.5 text-amber">Product</li>
+              <li class="rounded-full bg-pink/15 px-3 py-1.5 text-pink">Community</li>
+            </ul>
+            <p class="mt-5 border-t border-white/10 pt-4 text-sm text-star/60">Blocks run in 4-week cycles. Steps 05 – 07 repeat, block after block — that's the part that compounds.</p>
+          </div>
+        </div>
+
+        <ol class="journey">
+          <li class="journey__step" data-reveal>
+            <span class="journey__badge" style="--c:#2FC6FF">01</span>
+            <div class="journey__card">
+              <span class="font-mono text-xs text-coral">15 min · Free</span>
+              <h3 class="mt-2 font-display text-2xl font-bold">Quick consultation</h3>
+              <p class="mt-2 text-star/65">A free call about your business and what you want it to do. We listen, ask the right questions, and tell you honestly whether we can help.</p>
+              <a href="book.html" class="btn mt-5 inline-flex items-center gap-2 rounded-full border border-current px-4 py-2 text-sm font-semibold text-coral hover:bg-coral hover:text-ink">Book a consultation <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="journey__step" data-reveal style="--reveal-delay:60ms">
+            <span class="journey__badge journey__badge--quiet">02</span>
+            <div class="journey__card">
+              <span class="font-mono text-xs text-star/50">Strategy</span>
+              <h3 class="mt-2 font-display text-2xl font-bold">Create your content pillars</h3>
+              <p class="mt-2 text-star/65">We set your three pillars — brand awareness, product and community — and lock in a content plan that works with how your business actually runs.</p>
+            </div>
+          </li>
+          <li class="journey__step" data-reveal style="--reveal-delay:120ms">
+            <span class="journey__badge journey__badge--quiet">03</span>
+            <div class="journey__card">
+              <span class="font-mono text-xs text-star/50">1 or 3 months · Quoted</span>
+              <h3 class="mt-2 font-display text-2xl font-bold">Choose your retainer</h3>
+              <p class="mt-2 text-star/65">A 1-month retainer for a short-term push, or 3 months for long-term growth. Your goals decide which — we'll recommend, you choose. Pricing is quoted to your brief.</p>
+            </div>
+          </li>
+          <li class="journey__step" data-reveal style="--reveal-delay:180ms">
+            <span class="journey__badge journey__badge--quiet">04</span>
+            <div class="journey__card">
+              <span class="font-mono text-xs text-star/50">Once confirmed</span>
+              <h3 class="mt-2 font-display text-2xl font-bold">Get set up</h3>
+              <p class="mt-2 text-star/65">You get the onboarding form and we lock in your storyboard session dates — and filming sessions too, where we can. No passwords, just proper access.</p>
+            </div>
+          </li>
+          <li class="journey__step" data-reveal style="--reveal-delay:240ms">
+            <span class="journey__badge" style="--c:#FFD37A">05</span>
+            <div class="journey__card">
+              <span class="font-mono text-xs text-amber">Storyboard session</span>
+              <h3 class="mt-2 font-display text-2xl font-bold">Plan it in detail</h3>
+              <p class="mt-2 text-star/65">We confirm the filming session and get into the finer detail of every idea. The campaign brief comes out of this — it's what we script and plan from.</p>
+              <a href="book.html" class="btn mt-5 inline-flex items-center gap-2 rounded-full border border-current px-4 py-2 text-sm font-semibold text-amber hover:bg-amber hover:text-ink">Book a storyboard session <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="journey__step" data-reveal style="--reveal-delay:300ms">
+            <span class="journey__badge" style="--c:#FF5DA2">06</span>
+            <div class="journey__card">
+              <span class="font-mono text-xs text-pink">Filming shoot</span>
+              <h3 class="mt-2 font-display text-2xl font-bold">Film, edit, launch</h3>
+              <p class="mt-2 text-star/65">We film to the brief, edit it, and your campaigns start within 3 – 7 working days of the shoot.</p>
+              <a href="book.html" class="btn mt-5 inline-flex items-center gap-2 rounded-full border border-current px-4 py-2 text-sm font-semibold text-pink hover:bg-pink hover:text-ink">Lock in a filming day <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="journey__step journey__step--last" data-reveal style="--reveal-delay:360ms">
+            <span class="journey__badge" style="--c:#7C5CFF">07</span>
+            <div class="journey__card">
+              <span class="font-mono text-xs text-violet">4-week blocks</span>
+              <h3 class="mt-2 font-display text-2xl font-bold">Run the block, then go again</h3>
+              <p class="mt-2 text-star/65">Each block is four weeks. The goal is to maximise content across all three pillars, read the numbers, and plan the next one. General meetings keep it on track.</p>
+              <a href="book.html" class="btn mt-5 inline-flex items-center gap-2 rounded-full border border-current px-4 py-2 text-sm font-semibold text-violet hover:bg-violet hover:text-ink">Book a general meeting <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <!-- CTA -->
+    <section class="px-5 py-24 sm:px-8 sm:py-28">
+      <div class="mx-auto max-w-7xl rounded-4xl border border-white/10 bg-paper p-8 sm:p-12 lg:flex lg:items-center lg:justify-between lg:gap-12" data-reveal>
+        <div>
+          <p class="eyebrow text-amber">Ready when you are</p>
+          <p class="mt-3 font-display text-3xl font-bold sm:text-4xl">Step one is fifteen minutes.</p>
+          <p class="mt-3 max-w-xl text-muted">Free, no pitch — just an honest chat about your business and whether we're the right fit. Pricing is quoted to your brief after that.</p>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-3 lg:mt-0 lg:shrink-0">
+          <a href="book.html" class="btn rounded-full bg-violet px-7 py-4 text-base font-semibold text-white hover:bg-violet-700">Book a time</a>
+          <a href="contact.html" class="btn rounded-full border-2 border-white px-7 py-4 text-base font-semibold hover:bg-ink hover:text-star">Send a brief</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-ink px-5 py-16 text-star sm:px-8">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="flex items-center gap-2.5 font-display text-2xl font-extrabold">
+            <span class="flex h-9 w-9 items-center justify-center gap-px rounded-lg bg-mist font-display text-base font-extrabold leading-none text-star" aria-hidden="true"><span>Y</span><span class="h-4 w-px bg-white/40"></span><span>S</span></span>
+            Yoonspace
+          </a>
+          <p class="mt-5 max-w-xs text-star/60">A digital marketing studio in Ōtautahi Christchurch. We voice what you have, and give your brand the space to grow.</p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="eyebrow text-star/50">Explore</p>
+          <ul class="mt-4 space-y-3">
+            <li><a href="work.html" class="link-underline text-star/85">Work</a></li>
+            <li><a href="services.html" class="link-underline text-star/85">Services</a></li>
+            <li><a href="about.html" class="link-underline text-star/85">About</a></li>
+            <li><a href="how-we-work.html" class="link-underline text-star/85">How we work</a></li>
+            <li><a href="book.html" class="link-underline text-star/85">Book a time</a></li>
+            <li><a href="contact.html" class="link-underline text-star/85">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="eyebrow text-star/50">Say kia ora</p>
+          <ul class="mt-4 space-y-3 text-star/85">
+            <li><a href="mailto:ryan@yoonspace.co.nz" class="link-underline">ryan@yoonspace.co.nz</a></li>
+            <li><a href="https://www.instagram.com/_yoon_space_/" target="_blank" rel="noopener" class="link-underline">@_yoon_space_</a></li>
+            <li><a href="tel:+64273758313" class="link-underline">027 375 8313</a></li>
+            <li class="text-star/60">Ōtautahi Christchurch<br/>Aotearoa New Zealand</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-14 flex flex-col gap-3 border-t border-white/15 pt-6 font-mono text-xs text-star/50 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Yoonspace Ltd. Ngā mihi.</p>
+        <p>Built on the Canterbury Plains.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js?v=2026092901" defer></script>
+  <script src="assets/main.js?v=2026092901" defer></script>
+</body>
+</html>
