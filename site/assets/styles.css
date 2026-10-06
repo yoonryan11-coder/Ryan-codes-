@@ -251,3 +251,5 @@ body::after {
    Scattered planets (drift + bounce off each other)
    ============================================================ */
 .planets-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+html.planet-hover, html.planet-hover * { cursor: grab !important; }
+html.planet-grabbing, html.planet-grabbing * { cursor: grabbing !important; user-select: none; }
