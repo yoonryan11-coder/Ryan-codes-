@@ -240,6 +240,7 @@ body::after {
   border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
   transition: background .2s ease, border-color .2s ease;
 }
+.film__sound[hidden] { display: none; }
 .film__sound:hover { background: rgba(124,92,255,.85); border-color: transparent; }
 .film .film__wave { opacity: .35; transition: opacity .2s ease; }
 .film--sound .film__wave { opacity: 1; }
