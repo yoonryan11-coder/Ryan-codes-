@@ -209,6 +209,43 @@ body::after {
 }
 
 /* ============================================================
+   Brand film (homepage)
+   ============================================================ */
+.film {
+  position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 2rem;
+  border: 1px solid rgba(255,255,255,.1); background: #070811;
+  box-shadow: 0 30px 80px -30px rgba(124,92,255,.35);
+}
+.film iframe, .film video { position: absolute; inset: 0; width: 100%; height: 100%; display: block; object-fit: cover; }
+/* Oversize the YouTube frame a touch so its letterbox bars never show through the rounded corners */
+.film--live iframe { inset: -2px; width: calc(100% + 4px); height: calc(100% + 4px); }
+.film__placeholder {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem;
+  background:
+    radial-gradient(60% 80% at 20% 20%, rgba(124,92,255,.35), transparent 60%),
+    radial-gradient(50% 70% at 85% 80%, rgba(47,198,255,.25), transparent 60%),
+    #0E1124;
+}
+.film__badge {
+  display: inline-flex; align-items: center; gap: 6px; padding: .9rem 1.2rem; border-radius: 1rem;
+  background: #070811; color: #ECEEFB; font-family: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800; font-size: 2rem; letter-spacing: -.02em; border: 1px solid rgba(255,255,255,.1);
+}
+.film__bar { display: inline-block; width: 1px; height: 1.6rem; background: rgba(255,255,255,.5); }
+.film__soon { font-family: "Space Mono", ui-monospace, monospace; font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: #A0A2CC; }
+.film__sound {
+  position: absolute; left: 1.25rem; bottom: 1.25rem; z-index: 2;
+  display: inline-flex; align-items: center; gap: .5rem; padding: .6rem .95rem; border-radius: 9999px;
+  background: rgba(7,8,17,.75); color: #ECEEFB; font-size: .85rem; font-weight: 600;
+  border: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  transition: background .2s ease, border-color .2s ease;
+}
+.film__sound:hover { background: rgba(124,92,255,.85); border-color: transparent; }
+.film .film__wave { opacity: .35; transition: opacity .2s ease; }
+.film--sound .film__wave { opacity: 1; }
+@media (min-width: 640px) { .film__sound { left: 1.75rem; bottom: 1.75rem; } }
+
+/* ============================================================
    How-we-work journey (booking page)
    ============================================================ */
 .journey { position: relative; list-style: none; margin: 0; padding: 0; }

@@ -162,6 +162,96 @@
   });
 
   /* ============================================================
+     Brand film — autoplays muted (and loops) once it scrolls into
+     view, pauses off-screen, with a sound toggle. Accepts either a
+     YouTube id (data-film-yt) or a self-hosted file (data-film-src).
+     ============================================================ */
+  document.querySelectorAll("[data-film]").forEach(function (box) {
+    var ytId = box.getAttribute("data-film-yt");
+    var src = box.getAttribute("data-film-src");
+    if (!ytId && !src) return;
+
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var title = box.getAttribute("data-film-title") || "Video";
+    var soundBtn = box.querySelector("[data-film-sound]");
+    var soundLabel = box.querySelector("[data-film-sound-label]");
+    var placeholder = box.querySelector(".film__placeholder");
+    var player = null, muted = true, loaded = false;
+
+    function setSoundUI() {
+      if (!soundBtn) return;
+      soundBtn.hidden = false;
+      soundBtn.setAttribute("aria-pressed", muted ? "false" : "true");
+      box.classList.toggle("film--sound", !muted);
+      if (soundLabel) soundLabel.textContent = muted ? "Sound on" : "Sound off";
+    }
+
+    function ytCmd(func) {
+      if (player && player.contentWindow) {
+        player.contentWindow.postMessage(JSON.stringify({ event: "command", func: func, args: "" }), "*");
+      }
+    }
+
+    function load() {
+      if (loaded) return;
+      loaded = true;
+      if (placeholder) placeholder.remove();
+      box.classList.add("film--live");
+
+      if (src) {
+        var v = document.createElement("video");
+        v.src = src;
+        v.muted = true; v.loop = true; v.playsInline = true; v.preload = "metadata";
+        v.autoplay = !reduceMotion; v.controls = reduceMotion;
+        v.setAttribute("aria-label", title);
+        var poster = box.getAttribute("data-film-poster");
+        if (poster) v.poster = poster;
+        box.insertBefore(v, soundBtn);
+        player = v;
+      } else {
+        var origin = encodeURIComponent(location.origin);
+        var params = "autoplay=" + (reduceMotion ? 0 : 1) + "&mute=1&loop=1&playlist=" + ytId +
+          "&controls=" + (reduceMotion ? 1 : 0) + "&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&enablejsapi=1&origin=" + origin;
+        var iframe = document.createElement("iframe");
+        iframe.src = "https://www.youtube-nocookie.com/embed/" + ytId + "?" + params;
+        iframe.title = title;
+        iframe.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture");
+        iframe.setAttribute("allowfullscreen", "");
+        iframe.style.border = "0";
+        box.insertBefore(iframe, soundBtn);
+        player = iframe;
+      }
+      setSoundUI();
+    }
+
+    if (soundBtn) {
+      soundBtn.addEventListener("click", function () {
+        if (!player) return;
+        muted = !muted;
+        if (src) { player.muted = muted; }
+        else { ytCmd(muted ? "mute" : "unMute"); }
+        setSoundUI();
+      });
+    }
+
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            load();
+            if (!reduceMotion) { if (src) { player.play && player.play().catch(function () {}); } else { ytCmd("playVideo"); } }
+          } else if (loaded) {
+            if (src) { player.pause && player.pause(); } else { ytCmd("pauseVideo"); }
+          }
+        });
+      }, { rootMargin: "200px 0px", threshold: 0.15 });
+      io.observe(box);
+    } else {
+      load();
+    }
+  });
+
+  /* ============================================================
      Playable planets — desktop-only toy. They drift and bounce off
      the viewport edges and each other; nudge them with the pointer,
      or grab one and fling it. Skipped on touch devices and when
